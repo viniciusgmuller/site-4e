@@ -1,0 +1,153 @@
+---
+layout: base.njk
+title: Contato | 4E - Consultoria em Educação
+showLoader: false
+showFooter: false
+---
+
+<style>
+  .contact-page {
+    min-height: 100vh;
+    padding-top: 100px;
+  }
+  @media (max-width: 992px) {
+    .contact-page {
+      grid-template-columns: 1fr;
+    }
+    .contact-info {
+      padding: var(--space-12) var(--space-6);
+    }
+    .contact-form-section {
+      padding: var(--space-12) var(--space-6);
+    }
+  }
+</style>
+
+<div class="contact-page">
+  <!-- Left Side - Info -->
+  <div class="contact-info">
+    <div class="contact-info-bg">
+      <div class="hero-gradient-orb" style="top: -20%; left: -20%;"></div>
+      <div class="hero-gradient-orb" style="bottom: -20%; right: -20%;"></div>
+    </div>
+    <div class="contact-info-content">
+      <h1 class="contact-title reveal">
+        {{ pages.contato.hero.title | safe }}
+      </h1>
+      <p class="contact-text reveal">
+        {{ pages.contato.hero.subtitle }}
+      </p>
+
+      <div class="contact-details">
+        <div class="contact-item reveal">
+          <div class="contact-item-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <h4>E-mail</h4>
+            <p><a href="mailto:{{ site.email }}" style="color: var(--color-white);">{{ site.email }}</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item reveal reveal-delay-1">
+          <div class="contact-item-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <h4>Telefone</h4>
+            <p><a href="tel:{{ site.phone | replace(' ', '') | replace('(', '') | replace(')', '') | replace('-', '') }}" style="color: var(--color-white);">{{ site.phone }}</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item reveal reveal-delay-2">
+          <div class="contact-item-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <h4>Localização</h4>
+            <p>{{ site.location }}</p>
+          </div>
+        </div>
+
+        <div class="contact-item reveal reveal-delay-3">
+          <div class="contact-item-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <h4>{{ pages.contato.info.schedule.title }}</h4>
+            <p>{{ pages.contato.info.schedule.value }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: var(--space-12);">
+        <p style="color: var(--color-gray-400); font-size: var(--text-sm); margin-bottom: var(--space-4);">Siga-nos</p>
+        <div class="footer-social">
+          <a href="{{ site.social.linkedin }}" class="footer-social-link" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="{{ site.social.instagram }}" class="footer-social-link" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="{{ site.social.youtube }}" class="footer-social-link" aria-label="YouTube">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Side - Form -->
+  <div class="contact-form-section">
+    <form class="contact-form" id="contact-form">
+      <h2 class="reveal" style="margin-bottom: var(--space-2);">{{ pages.contato.form.title }}</h2>
+      <p class="reveal" style="color: var(--color-gray-500); margin-bottom: var(--space-8);">{{ pages.contato.form.subtitle }}</p>
+
+      <div class="form-group reveal">
+        <label class="form-label" for="name">Nome completo *</label>
+        <input type="text" id="name" name="name" class="form-input" placeholder="Seu nome" required>
+      </div>
+
+      <div class="form-group reveal">
+        <label class="form-label" for="email">E-mail *</label>
+        <input type="email" id="email" name="email" class="form-input" placeholder="seu@email.com" required>
+      </div>
+
+      <div class="form-group reveal">
+        <label class="form-label" for="phone">Telefone</label>
+        <input type="tel" id="phone" name="phone" class="form-input" placeholder="(11) 99999-9999">
+      </div>
+
+      <div class="form-group reveal">
+        <label class="form-label" for="institution">Instituição</label>
+        <input type="text" id="institution" name="institution" class="form-input" placeholder="Nome da sua instituição">
+      </div>
+
+      <div class="form-group reveal">
+        <label class="form-label" for="interest">Área de interesse *</label>
+        <select id="interest" name="interest" class="form-select" required>
+          <option value="">Selecione uma opção</option>
+          <option value="gestao-publica">Gestão Pública</option>
+          <option value="educacao-privada">Educação Privada</option>
+          <option value="educacao-corporativa">Educação Corporativa</option>
+          <option value="gestao-crises">Gestão de Crises</option>
+          <option value="outro">Outro</option>
+        </select>
+      </div>
+
+      <div class="form-group reveal">
+        <label class="form-label" for="message">Mensagem *</label>
+        <textarea id="message" name="message" class="form-textarea" placeholder="Conte-nos sobre sua necessidade..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg magnetic reveal" style="width: 100%;">
+        {{ pages.contato.form.submitButton }}
+        <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+
+      <p class="reveal" style="color: var(--color-gray-400); font-size: var(--text-xs); margin-top: var(--space-4); text-align: center;">
+        {{ pages.contato.form.privacyText }} <a href="#" style="color: var(--color-black); text-decoration: underline;">Política de Privacidade</a>.
+      </p>
+    </form>
+  </div>
+</div>

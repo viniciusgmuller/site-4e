@@ -1,0 +1,145 @@
+---
+layout: base.njk
+title: Sobre | 4E - Consultoria em Educação
+showLoader: false
+---
+
+<!-- About Hero -->
+<section class="about-hero">
+  <div class="hero-background">
+    <div class="hero-gradient-orb"></div>
+    <div class="hero-gradient-orb"></div>
+    <div class="hero-gradient-orb"></div>
+  </div>
+  <div class="container">
+    <div class="about-hero-content">
+      <span class="section-label reveal" style="color: var(--color-gray-400);">{{ pages.sobre.hero.label }}</span>
+      <h1 class="about-hero-title reveal">
+        {{ pages.sobre.hero.title | safe }}
+      </h1>
+      <p class="about-hero-text reveal">
+        {{ pages.sobre.hero.text }}
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Propósito -->
+<section class="section-lg" style="background: var(--color-white);">
+  <div class="container">
+    <div class="about-preview-grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-20); align-items: center;">
+      <div>
+        <span class="section-label reveal">{{ pages.sobre.purpose.label }}</span>
+        <h2 class="reveal" style="margin-bottom: var(--space-6);">
+          {{ pages.sobre.purpose.title | safe }}
+        </h2>
+        {% for paragraph in pages.sobre.purpose.paragraphs %}
+        <p class="reveal" style="color: var(--color-gray-600); {% if loop.first %}font-size: var(--text-lg); margin-bottom: var(--space-6);{% endif %}">
+          {{ paragraph }}
+        </p>
+        {% endfor %}
+      </div>
+      <div style="text-align: center;">
+        <div class="about-logo-large reveal" style="font-size: 15vw; opacity: 0.15;">4e</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Os 4 Es -->
+<section class="section-lg" style="background: var(--color-black);">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: var(--space-16);">
+      <span class="section-label reveal" style="color: var(--color-gray-400);">{{ pages.sobre.pillars.label }}</span>
+      <h2 class="reveal" style="color: var(--color-white);">
+        {{ pages.sobre.pillars.title | safe }}
+      </h2>
+    </div>
+
+    <div class="services-grid" style="grid-template-columns: repeat(4, 1fr);">
+      {% for pillar in pages.sobre.pillars.items %}
+      <div class="about-value reveal {% if not loop.first %}reveal-delay-{{ loop.index0 }}{% endif %}" style="background: rgba(255,255,255,0.05); padding: var(--space-8);">
+        <h3 style="color: var(--color-{{ pillar.color }}); font-size: var(--text-3xl); margin-bottom: var(--space-4);">{{ pillar.letter }}</h3>
+        <h4 style="color: var(--color-white); margin-bottom: var(--space-3);">{{ pillar.name }}</h4>
+        <p style="color: var(--color-gray-400); font-size: var(--text-sm); margin: 0;">
+          {{ pillar.description }}
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Essência da Marca -->
+<section class="section-lg" style="background: var(--color-white);">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: var(--space-16);">
+      <span class="section-label reveal">{{ pages.sobre.essence.label }}</span>
+      <h2 class="reveal">{{ pages.sobre.essence.title | safe }}</h2>
+    </div>
+
+    <div class="services-grid" style="grid-template-columns: repeat(3, 1fr);">
+      {% for item in pages.sobre.essence.items %}
+      <div class="service-card reveal {% if not loop.first %}reveal-delay-{{ loop.index0 }}{% endif %}" style="--card-color: var(--gradient-start);">
+        <div class="service-icon" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid-1));">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="service-title">{{ item.title }}</h3>
+        <p class="service-description">{{ item.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Equipe / Fundadores -->
+<section class="founders section-lg" id="equipe" style="background: var(--color-gray-100);">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: var(--space-16);">
+      <span class="section-label reveal">{{ pages.sobre.team.label }}</span>
+      <h2 class="reveal">{{ pages.sobre.team.title | safe }}</h2>
+      <p class="reveal" style="color: var(--color-gray-600); max-width: 600px; margin: var(--space-4) auto 0;">
+        {{ pages.sobre.team.subtitle }}
+      </p>
+    </div>
+
+    <div class="founders-grid">
+      {% for member in team.team %}
+      <div class="founder-card reveal {% if not loop.first %}reveal-delay-{{ loop.index0 }}{% endif %}">
+        <div class="founder-image">
+          {% if member.image %}
+          <img src="{{ member.image }}" alt="{{ member.name }}">
+          {% else %}
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          {% endif %}
+        </div>
+        <h3 class="founder-name">{{ member.name }}</h3>
+        <p class="founder-role">{{ member.role }}</p>
+        <p class="founder-bio">{{ member.bio }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section section-lg">
+  <div class="cta-background">
+    <div class="hero-gradient-orb"></div>
+    <div class="hero-gradient-orb"></div>
+  </div>
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title reveal">
+        {{ pages.sobre.cta.title | safe }}
+      </h2>
+      <p class="cta-text reveal">
+        {{ pages.sobre.cta.subtitle }}
+      </p>
+      <a href="{{ pages.sobre.cta.buttonLink }}" class="btn btn-primary btn-lg magnetic reveal">
+        {{ pages.sobre.cta.buttonText }}
+        <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </div>
+</section>

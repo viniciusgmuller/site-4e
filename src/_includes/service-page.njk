@@ -1,0 +1,125 @@
+{# Template reutilizável para páginas de serviço #}
+
+<!-- Hero Section -->
+<section class="sp-hero">
+  <div class="sp-hero-symbol">
+    {% include "icons/" + pageData.id + "-symbol.njk" ignore missing %}
+  </div>
+
+  <div class="container">
+    <div class="sp-hero-content">
+      <h1 class="sp-hero-title reveal">
+        {{ pageData.hero.title | safe }}
+      </h1>
+
+      <p class="sp-hero-subtitle reveal">
+        {{ pageData.hero.subtitle }}
+      </p>
+
+      <div class="sp-hero-stats reveal">
+        {% for stat in pageData.hero.stats %}
+        <div class="sp-hero-stat">
+          <div class="sp-hero-stat-number">{{ stat.number }}</div>
+          <div class="sp-hero-stat-label">{{ stat.label }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Propósito Section -->
+<section class="sp-purpose">
+  <div class="container">
+    <div class="sp-purpose-grid">
+      <div class="sp-purpose-visual reveal">
+        <div class="sp-purpose-symbol"></div>
+      </div>
+
+      <div class="sp-purpose-content">
+        <span class="section-label reveal">{{ pageData.purpose.label }}</span>
+        <h2 class="reveal">{{ pageData.purpose.title | safe }}</h2>
+        {% for paragraph in pageData.purpose.paragraphs %}
+        <p class="reveal">{{ paragraph }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Desafios Section -->
+<section class="sp-challenges">
+  <div class="container">
+    <div class="sp-section-header">
+      <span class="section-label reveal">{{ pageData.challenges.label }}</span>
+      <h2 class="reveal">{{ pageData.challenges.title | safe }}</h2>
+      <p class="reveal">{{ pageData.challenges.subtitle }}</p>
+    </div>
+
+    <div class="sp-challenges-grid">
+      {% for challenge in pageData.challenges.items %}
+      <div class="sp-challenge-card reveal {% if not loop.first %}reveal-delay-{{ (loop.index0 % 3) }}{% endif %}">
+        <div class="sp-challenge-icon">
+          {% if challenge.icon == 'document' %}
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          {% elif challenge.icon == 'clock' %}
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          {% elif challenge.icon == 'shield' %}
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          {% elif challenge.icon == 'users' %}
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          {% elif challenge.icon == 'money' %}
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          {% elif challenge.icon == 'chart' %}
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          {% else %}
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+          {% endif %}
+        </div>
+        <h3 class="sp-challenge-title">{{ challenge.title }}</h3>
+        <p class="sp-challenge-text">{{ challenge.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Serviços Section -->
+<section class="sp-services">
+  <div class="container">
+    <div class="sp-section-header">
+      <span class="section-label reveal">{{ pageData.services.label }}</span>
+      <h2 class="reveal">{{ pageData.services.title | safe }}</h2>
+      <p class="reveal">{{ pageData.services.subtitle }}</p>
+    </div>
+
+    <div class="sp-services-grid">
+      {% for service in pageData.services.items %}
+      <div class="sp-service-card reveal {% if not loop.first %}reveal-delay-{{ (loop.index0 % 2) }}{% endif %}">
+        <div class="sp-service-number">{{ loop.index | string | padStart(2, '0') }}</div>
+        <h3 class="sp-service-title">{{ service.title }}</h3>
+        <p class="sp-service-description">{{ service.description }}</p>
+        <ul class="sp-service-features">
+          {% for feature in service.features %}
+          <li>{{ feature }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="sp-cta">
+  <div class="container">
+    <div class="sp-cta-content">
+      <h2 class="sp-cta-title reveal">{{ pageData.cta.title }}</h2>
+      <p class="sp-cta-text reveal">{{ pageData.cta.subtitle }}</p>
+      <a href="{{ pageData.cta.buttonLink }}" class="btn btn-primary btn-lg magnetic reveal">
+        {{ pageData.cta.buttonText }}
+        <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </div>
+</section>
