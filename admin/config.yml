@@ -99,51 +99,54 @@ collections:
   # =====================================
   - name: "stats"
     label: "Estatísticas"
-    file: "src/_data/stats.json"
-    fields:
-      - label: "Estatísticas"
-        name: "stats"
-        widget: "list"
+    files:
+      - name: "stats"
+        label: "Números"
+        file: "src/_data/stats.json"
         fields:
-          - { name: "number", label: "Número", widget: "number" }
-          - { name: "label", label: "Descrição", widget: "string" }
-          - { name: "suffix", label: "Sufixo (%, +, etc)", widget: "string", required: false }
+          - label: "Estatísticas"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { name: "number", label: "Número", widget: "number" }
+              - { name: "label", label: "Descrição", widget: "string" }
+              - { name: "suffix", label: "Sufixo (%, +, etc)", widget: "string", required: false }
 
   # =====================================
   # SERVIÇOS
   # =====================================
   - name: "services"
     label: "Serviços"
-    file: "src/_data/services.json"
-    fields:
-      - label: "Serviços"
-        name: "services"
-        widget: "list"
+    files:
+      - name: "services"
+        label: "Lista de Serviços"
+        file: "src/_data/services.json"
         fields:
-          - { name: "id", label: "ID (não alterar)", widget: "string" }
-          - { name: "number", label: "Número", widget: "string" }
-          - { name: "title", label: "Título", widget: "string" }
-          - { name: "description", label: "Descrição curta", widget: "text" }
-          - { name: "link", label: "Link da página", widget: "string" }
+          - label: "Serviços"
+            name: "services"
+            widget: "list"
+            fields:
+              - { name: "id", label: "ID (não alterar)", widget: "string" }
+              - { name: "number", label: "Número", widget: "string" }
+              - { name: "title", label: "Título", widget: "string" }
+              - { name: "description", label: "Descrição curta", widget: "text" }
+              - { name: "link", label: "Link da página", widget: "string" }
 
   # =====================================
   # EQUIPE
   # =====================================
   - name: "team"
     label: "Equipe"
-    file: "src/_data/team.json"
-    fields:
-      - label: "Membros da Equipe"
-        name: "team"
-        widget: "list"
+    files:
+      - name: "team"
+        label: "Membros"
+        file: "src/_data/team.json"
         fields:
-          - { name: "name", label: "Nome", widget: "string" }
-          - { name: "role", label: "Cargo", widget: "string" }
-          - { name: "bio", label: "Biografia", widget: "text" }
-          - { name: "image", label: "Foto", widget: "image", required: false }
-
-  # =====================================
-  # PÁGINAS DE SERVIÇO (futuro)
-  # =====================================
-  # Aqui podem ser adicionadas páginas individuais de serviço
-  # quando o conteúdo for migrado para arquivos Markdown
+          - label: "Membros da Equipe"
+            name: "team"
+            widget: "list"
+            fields:
+              - { name: "name", label: "Nome", widget: "string" }
+              - { name: "role", label: "Cargo", widget: "string" }
+              - { name: "bio", label: "Biografia", widget: "text" }
+              - { name: "image", label: "Foto", widget: "image", required: false }
