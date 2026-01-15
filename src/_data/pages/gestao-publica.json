@@ -1,0 +1,93 @@
+{
+  "id": "gestao-publica",
+  "title": "Gestão Pública",
+  "metaDescription": "4E Gestão Pública - Consultoria especializada para secretarias de educação, implementação de BNCC, Novo Ensino Médio e compliance regulatório.",
+  "bodyClass": "sp-gestao-publica",
+  "hero": {
+    "title": "Transformando a <span class=\"text-gradient\">educação pública</span> com expertise e método",
+    "subtitle": "Consultoria estratégica para secretarias municipais e estaduais de educação. Implementação de políticas educacionais com segurança jurídica, compliance regulatório e foco em resultados mensuráveis.",
+    "stats": [
+      { "number": "85+", "label": "Secretarias Atendidas" },
+      { "number": "24", "label": "Estados" },
+      { "number": "100%", "label": "Conformidade TCE/TCU" }
+    ]
+  },
+  "purpose": {
+    "label": "Nosso Propósito",
+    "title": "Educação pública de <span style=\"color: var(--sp-color);\">excelência</span> é possível",
+    "paragraphs": [
+      "Acreditamos que toda criança brasileira merece acesso a uma educação pública de qualidade. Por isso, trabalhamos lado a lado com gestores públicos para transformar secretarias de educação em ambientes de alta performance, com processos claros, conformidade legal e foco permanente na melhoria dos indicadores educacionais.",
+      "Nossa equipe viveu os desafios da gestão pública por dentro. Conhecemos a burocracia, as limitações orçamentárias e a pressão política. Essa experiência nos permite oferecer soluções que funcionam na prática, não apenas na teoria."
+    ]
+  },
+  "challenges": {
+    "label": "Desafios",
+    "title": "Os obstáculos que <span style=\"color: var(--sp-color);\">superamos juntos</span>",
+    "subtitle": "Conhecemos profundamente os desafios enfrentados pelas secretarias de educação brasileiras.",
+    "items": [
+      {
+        "icon": "document",
+        "title": "Implementação BNCC",
+        "description": "Dificuldade em implementar a Base Nacional Comum Curricular com segurança jurídica e conformidade regulatória."
+      },
+      {
+        "icon": "clock",
+        "title": "Novo Ensino Médio",
+        "description": "Prazo apertado para adaptação ao NEM (2026-2027) sem metodologia clara e suporte técnico adequado."
+      },
+      {
+        "icon": "shield",
+        "title": "Compliance TCE/TCU",
+        "description": "Risco de irregularidades em prestação de contas, licitações e contratos sem assessoria especializada."
+      },
+      {
+        "icon": "users",
+        "title": "Gestão de Pessoas",
+        "description": "Conflitos trabalhistas com servidores, resistência a mudanças e carência de formação continuada."
+      },
+      {
+        "icon": "money",
+        "title": "Orçamento Limitado",
+        "description": "Recursos escassos exigem priorização estratégica e eficiência máxima na alocação de verbas públicas."
+      },
+      {
+        "icon": "chart",
+        "title": "Indicadores Educacionais",
+        "description": "Pressão por melhoria no IDEB e outros indicadores sem metodologia clara de intervenção pedagógica."
+      }
+    ]
+  },
+  "services": {
+    "label": "Nossos Serviços",
+    "title": "Soluções completas para <span style=\"color: var(--sp-color);\">gestão educacional</span>",
+    "subtitle": "Oferecemos um portfólio completo de serviços para atender todas as necessidades das secretarias de educação.",
+    "items": [
+      {
+        "title": "Diagnóstico Institucional",
+        "description": "Análise completa da estrutura organizacional, processos e indicadores. Identificação de gaps e oportunidades de melhoria.",
+        "features": ["Mapeamento de processos", "Análise de indicadores", "Benchmarking regional", "Plano de ação priorizado"]
+      },
+      {
+        "title": "Implementação BNCC e NEM",
+        "description": "Apoio técnico completo para implementação da Base Nacional Comum Curricular e adequação ao Novo Ensino Médio.",
+        "features": ["Revisão curricular", "Formação de professores", "Material didático", "Acompanhamento pedagógico"]
+      },
+      {
+        "title": "Compliance e Auditoria",
+        "description": "Adequação a normas do TCE/TCU, preparação para auditorias e gestão de riscos regulatórios.",
+        "features": ["Análise de contratos", "Revisão de licitações", "Prestação de contas", "Treinamento de equipes"]
+      },
+      {
+        "title": "Gestão de Pessoas",
+        "description": "Estruturação de carreiras, mediação de conflitos e programas de desenvolvimento profissional.",
+        "features": ["Plano de cargos e salários", "Mediação trabalhista", "Formação continuada", "Avaliação de desempenho"]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto para transformar a educação no seu município?",
+    "subtitle": "Agende um diagnóstico gratuito e descubra como podemos ajudar sua secretaria a alcançar resultados extraordinários.",
+    "buttonText": "Agendar Diagnóstico",
+    "buttonLink": "/contato.html"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "id": "educacao-corporativa",
+  "title": "Educação Corporativa",
+  "metaDescription": "4E Educação Corporativa - Estruturação de universidades corporativas, programas de T&D e academias de liderança para empresas e fundações.",
+  "bodyClass": "sp-educacao-corporativa",
+  "hero": {
+    "title": "Desenvolvendo <span class=\"text-gradient\">talentos</span> para o futuro das organizações",
+    "subtitle": "Estruturamos programas de educação corporativa que transformam colaboradores em agentes de mudança. Da universidade corporativa ao treinamento técnico, criamos soluções sob medida.",
+    "stats": [
+      { "number": "50+", "label": "Empresas Atendidas" },
+      { "number": "10k+", "label": "Profissionais Formados" },
+      { "number": "95%", "label": "NPS Médio" }
+    ]
+  },
+  "purpose": {
+    "label": "Nosso Propósito",
+    "title": "Educação como <span style=\"color: var(--sp-color);\">vantagem competitiva</span>",
+    "paragraphs": [
+      "Em um mundo de transformação acelerada, empresas que investem no desenvolvimento de seus colaboradores constroem vantagens competitivas sustentáveis. A educação corporativa é o motor dessa transformação.",
+      "Nossa equipe combina expertise pedagógica com conhecimento de negócios para criar programas que geram resultados mensuráveis e impacto real nas organizações."
+    ]
+  },
+  "challenges": {
+    "label": "Desafios",
+    "title": "Os desafios que <span style=\"color: var(--sp-color);\">endereçamos</span>",
+    "subtitle": "Conhecemos os obstáculos que as organizações enfrentam para desenvolver seus talentos.",
+    "items": [
+      {
+        "icon": "chart",
+        "title": "ROI de Treinamentos",
+        "description": "Dificuldade em mensurar o retorno sobre investimento em programas de desenvolvimento."
+      },
+      {
+        "icon": "users",
+        "title": "Engajamento",
+        "description": "Baixa adesão e conclusão de treinamentos, especialmente em formatos online."
+      },
+      {
+        "icon": "clock",
+        "title": "Tempo dos Colaboradores",
+        "description": "Equilibrar demandas operacionais com tempo dedicado ao desenvolvimento."
+      },
+      {
+        "icon": "document",
+        "title": "Conteúdo Relevante",
+        "description": "Criar materiais que sejam aplicáveis ao dia a dia e à realidade da empresa."
+      },
+      {
+        "icon": "shield",
+        "title": "Escala e Padronização",
+        "description": "Manter qualidade e consistência em programas para milhares de colaboradores."
+      },
+      {
+        "icon": "money",
+        "title": "Orçamento Limitado",
+        "description": "Maximizar impacto com recursos restritos para treinamento e desenvolvimento."
+      }
+    ]
+  },
+  "services": {
+    "label": "Nossos Serviços",
+    "title": "Soluções para <span style=\"color: var(--sp-color);\">desenvolvimento organizacional</span>",
+    "subtitle": "Oferecemos um portfólio completo de serviços em educação corporativa.",
+    "items": [
+      {
+        "title": "Universidade Corporativa",
+        "description": "Estruturação completa de universidades corporativas, desde o diagnóstico até a operação.",
+        "features": ["Diagnóstico de competências", "Arquitetura de aprendizagem", "Plataforma LMS", "Curadoria de conteúdo"]
+      },
+      {
+        "title": "Programas de Liderança",
+        "description": "Academias de liderança para formação de gestores e desenvolvimento de pipeline executivo.",
+        "features": ["Assessment de líderes", "Trilhas de desenvolvimento", "Mentoria executiva", "Business cases"]
+      },
+      {
+        "title": "Treinamentos Técnicos",
+        "description": "Programas de capacitação técnica com foco em aplicação prática e resultados.",
+        "features": ["Análise de gaps", "Conteúdo customizado", "Certificação", "Avaliação de impacto"]
+      },
+      {
+        "title": "Cultura e Engajamento",
+        "description": "Programas de onboarding, integração e fortalecimento da cultura organizacional.",
+        "features": ["Onboarding estruturado", "Comunicação interna", "Reconhecimento", "Pesquisas de clima"]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto para transformar o desenvolvimento na sua empresa?",
+    "subtitle": "Vamos conversar sobre como estruturar programas de educação corporativa que geram resultados.",
+    "buttonText": "Agendar Conversa",
+    "buttonLink": "/contato.html"
+  }
+}

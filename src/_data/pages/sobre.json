@@ -1,0 +1,76 @@
+{
+  "title": "Sobre",
+  "metaDescription": "Conheça a 4E - Nossa história, propósito e equipe. Transformamos a educação brasileira com expertise multidisciplinar.",
+  "hero": {
+    "label": "Sobre a 4E",
+    "title": "<span class=\"text-gradient-animated\">4 pilares</span> que transformam a educação",
+    "text": "A 4E nasceu da gestão educacional real. Somos uma consultoria multidisciplinar que combina expertise em educação, experiência prática, estratégia integrada e excelência técnica para impulsionar instituições de ensino a novos patamares."
+  },
+  "purpose": {
+    "label": "Nosso Propósito",
+    "title": "Impulsionamos instituições de ensino a alcançar <span class=\"text-gradient\">resultados extraordinários</span>",
+    "paragraphs": [
+      "Impulsionamos administrações públicas e instituições de ensino a alcançar organização, resultados e segurança jurídica através da expertise em gestão educacional, gestão de crise, da segurança jurídica e compliance que transformam os desafios em soluções.",
+      "O objetivo da 4E é colocar toda a expertise em educação, gestão pública, gestão de crises e direito educacional à disposição para que secretarias de educação, assistência social e escolas possam observar significativas melhoras em sua gestão, compliance, processos internos e eficiência."
+    ]
+  },
+  "pillars": {
+    "label": "Os 4 Pilares",
+    "title": "<span class=\"text-gradient\">Educação, Experiência,</span><br><span class=\"text-gradient\">Estratégia e Excelência</span>",
+    "items": [
+      {
+        "letter": "E",
+        "name": "Educação",
+        "color": "gestao-publica",
+        "description": "A educação é o propósito fundador da 4E. Mais do que setor de atuação, representa compromisso com transformação social através do fortalecimento de instituições educacionais."
+      },
+      {
+        "letter": "E",
+        "name": "Experiência",
+        "color": "educacao-privada",
+        "description": "A experiência da 4E vem da gestão educacional real - processos trabalhistas, crises, fiscalizações, pressões orçamentárias. Essa vivência prática permite antecipar cenários e propor soluções factíveis."
+      },
+      {
+        "letter": "E",
+        "name": "Estratégia",
+        "color": "educacao-corporativa",
+        "description": "A estratégia define a abordagem da 4E: visão sistêmica que conecta jurídico, gestão, compliance e operações em soluções integradas de longo prazo."
+      },
+      {
+        "letter": "E",
+        "name": "Excelência",
+        "color": "gestao-crises",
+        "description": "A excelência é o padrão inegociável da 4E: rigor técnico absoluto, pareceres juridicamente sólidos, contratos impecáveis, diagnósticos precisos."
+      }
+    ]
+  },
+  "essence": {
+    "label": "Nossa Essência",
+    "title": "O que nos <span class=\"text-gradient\">diferencia</span>",
+    "items": [
+      {
+        "title": "Credibilidade Técnica",
+        "description": "Combinação única de expertise jurídica especializada em direito educacional, experiência comprovada em gestão de crises e conformidade regulatória."
+      },
+      {
+        "title": "Multidisciplinaridade Integrada",
+        "description": "Convergência estratégica de direito educacional, gestão pública e privada, compliance regulatório, mediação de conflitos e gestão de crises."
+      },
+      {
+        "title": "Raízes na Gestão, Não na Tecnologia",
+        "description": "A 4E nasceu da gestão educacional real, não de laboratórios de tecnologia. O valor está em processos bem estruturados e pessoas capacitadas."
+      }
+    ]
+  },
+  "team": {
+    "label": "Nossa Equipe",
+    "title": "Os especialistas por trás da <span class=\"text-gradient\">4E</span>",
+    "subtitle": "Uma equipe multidisciplinar com décadas de experiência combinada em educação, direito e gestão."
+  },
+  "cta": {
+    "title": "Vamos transformar a educação <span class=\"text-gradient-animated\">juntos?</span>",
+    "subtitle": "Entre em contato e descubra como a 4E pode ajudar sua instituição a alcançar novos patamares.",
+    "buttonText": "Fale Conosco",
+    "buttonLink": "/contato.html"
+  }
+}

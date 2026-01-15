@@ -1,0 +1,93 @@
+{
+  "id": "educacao-privada",
+  "title": "Educação Privada",
+  "metaDescription": "4E Educação Privada - Gestão estratégica para escolas privadas e instituições de ensino superior. Compliance, expansão e excelência acadêmica.",
+  "bodyClass": "sp-educacao-privada",
+  "hero": {
+    "title": "Gestão estratégica para <span class=\"text-gradient\">escolas e IES</span> de excelência",
+    "subtitle": "Consultoria especializada para instituições de ensino privadas. Da governança corporativa à excelência acadêmica, ajudamos sua escola a crescer com sustentabilidade e qualidade.",
+    "stats": [
+      { "number": "120+", "label": "Instituições Atendidas" },
+      { "number": "15", "label": "Anos de Experiência" },
+      { "number": "98%", "label": "Satisfação" }
+    ]
+  },
+  "purpose": {
+    "label": "Nosso Propósito",
+    "title": "Escolas privadas de <span style=\"color: var(--sp-color);\">alto desempenho</span>",
+    "paragraphs": [
+      "No competitivo mercado educacional brasileiro, instituições precisam equilibrar excelência acadêmica com sustentabilidade financeira. Nossa consultoria oferece a expertise necessária para alcançar esse equilíbrio.",
+      "Combinamos conhecimento profundo do setor educacional com as melhores práticas de gestão empresarial para transformar escolas em organizações de alta performance."
+    ]
+  },
+  "challenges": {
+    "label": "Desafios",
+    "title": "Os desafios que <span style=\"color: var(--sp-color);\">transformamos em oportunidades</span>",
+    "subtitle": "Entendemos as particularidades do mercado educacional privado.",
+    "items": [
+      {
+        "icon": "chart",
+        "title": "Sustentabilidade Financeira",
+        "description": "Equilibrar mensalidades competitivas com custos crescentes e investimentos em qualidade."
+      },
+      {
+        "icon": "users",
+        "title": "Captação e Retenção",
+        "description": "Atrair novos alunos e manter as famílias engajadas em um mercado cada vez mais competitivo."
+      },
+      {
+        "icon": "document",
+        "title": "Compliance Regulatório",
+        "description": "Atender às exigências do MEC, conselhos estaduais e normas de credenciamento."
+      },
+      {
+        "icon": "shield",
+        "title": "Gestão de Crises",
+        "description": "Lidar com conflitos com famílias, funcionários e situações de crise institucional."
+      },
+      {
+        "icon": "clock",
+        "title": "Inovação Pedagógica",
+        "description": "Implementar metodologias ativas e tecnologias educacionais sem perder identidade."
+      },
+      {
+        "icon": "users",
+        "title": "Formação de Professores",
+        "description": "Desenvolver e reter talentos docentes em um mercado de trabalho competitivo."
+      }
+    ]
+  },
+  "services": {
+    "label": "Nossos Serviços",
+    "title": "Soluções para <span style=\"color: var(--sp-color);\">crescimento sustentável</span>",
+    "subtitle": "Oferecemos consultoria completa para todas as áreas da gestão escolar.",
+    "items": [
+      {
+        "title": "Planejamento Estratégico",
+        "description": "Definição de visão, missão, valores e objetivos estratégicos alinhados ao mercado e à identidade institucional.",
+        "features": ["Análise de mercado", "Posicionamento", "Metas de crescimento", "Plano de ação"]
+      },
+      {
+        "title": "Gestão Financeira",
+        "description": "Estruturação de orçamento, precificação, controle de custos e análise de viabilidade de investimentos.",
+        "features": ["Orçamento base zero", "Precificação estratégica", "Controle de inadimplência", "Análise de ROI"]
+      },
+      {
+        "title": "Excelência Acadêmica",
+        "description": "Desenvolvimento de projeto pedagógico, formação docente e implementação de metodologias inovadoras.",
+        "features": ["Projeto pedagógico", "Formação continuada", "Avaliação institucional", "Metodologias ativas"]
+      },
+      {
+        "title": "Compliance e Jurídico",
+        "description": "Adequação a normas regulatórias, gestão de contratos e prevenção de litígios.",
+        "features": ["Credenciamento MEC", "Contratos educacionais", "LGPD", "Prevenção de conflitos"]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto para levar sua escola ao próximo nível?",
+    "subtitle": "Agende uma conversa e descubra como podemos ajudar sua instituição a crescer com excelência.",
+    "buttonText": "Agendar Conversa",
+    "buttonLink": "/contato.html"
+  }
+}

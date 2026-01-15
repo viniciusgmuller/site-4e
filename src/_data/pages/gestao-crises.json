@@ -1,0 +1,93 @@
+{
+  "id": "gestao-crises",
+  "title": "Gestão de Crises",
+  "metaDescription": "4E Gestão de Crises - Prevenção, mediação e resolução de crises institucionais em organizações educacionais. Atuação rápida e discreta.",
+  "bodyClass": "sp-gestao-crises",
+  "hero": {
+    "title": "Prevenção e resolução de <span class=\"text-gradient\">crises institucionais</span>",
+    "subtitle": "Quando a crise acontece, cada hora conta. Nossa equipe especializada atua com rapidez, discrição e expertise para proteger a reputação e a continuidade das instituições educacionais.",
+    "stats": [
+      { "number": "500+", "label": "Crises Resolvidas" },
+      { "number": "24h", "label": "Tempo de Resposta" },
+      { "number": "100%", "label": "Confidencialidade" }
+    ]
+  },
+  "purpose": {
+    "label": "Nosso Propósito",
+    "title": "Proteger o que você <span style=\"color: var(--sp-color);\">construiu</span>",
+    "paragraphs": [
+      "Crises institucionais podem destruir em dias o que levou décadas para construir. Nossa missão é proteger a reputação, a operação e o futuro das instituições educacionais nos momentos mais críticos.",
+      "Combinamos experiência jurídica, conhecimento de gestão de crises e profundo entendimento do setor educacional para oferecer soluções rápidas e eficazes."
+    ]
+  },
+  "challenges": {
+    "label": "Tipos de Crises",
+    "title": "Situações que <span style=\"color: var(--sp-color);\">demandamos ação imediata</span>",
+    "subtitle": "Atuamos em diversos tipos de crises institucionais no setor educacional.",
+    "items": [
+      {
+        "icon": "shield",
+        "title": "Denúncias e Investigações",
+        "description": "Acusações de assédio, bullying, negligência ou condutas impróprias que exigem investigação e resposta."
+      },
+      {
+        "icon": "users",
+        "title": "Conflitos com Famílias",
+        "description": "Disputas contratuais, reclamações públicas e situações de conflito que ameaçam a reputação."
+      },
+      {
+        "icon": "document",
+        "title": "Crises Regulatórias",
+        "description": "Descredenciamento, autuações, multas e sanções de órgãos reguladores."
+      },
+      {
+        "icon": "money",
+        "title": "Crises Financeiras",
+        "description": "Inadimplência massiva, problemas de fluxo de caixa e risco de descontinuidade."
+      },
+      {
+        "icon": "users",
+        "title": "Conflitos Trabalhistas",
+        "description": "Greves, paralisações, demissões em massa e passivos trabalhistas significativos."
+      },
+      {
+        "icon": "chart",
+        "title": "Crises de Reputação",
+        "description": "Exposição negativa em mídia, redes sociais e vazamento de informações sensíveis."
+      }
+    ]
+  },
+  "services": {
+    "label": "Nossos Serviços",
+    "title": "Atuação em todas as fases da <span style=\"color: var(--sp-color);\">gestão de crises</span>",
+    "subtitle": "Da prevenção à recuperação, oferecemos suporte completo.",
+    "items": [
+      {
+        "title": "Prevenção de Crises",
+        "description": "Mapeamento de riscos, protocolos de resposta e treinamento de equipes para prevenir e mitigar crises.",
+        "features": ["Mapeamento de riscos", "Protocolos de crise", "Comitê de crise", "Simulações"]
+      },
+      {
+        "title": "Resposta Imediata",
+        "description": "Atuação nas primeiras horas críticas com equipe dedicada, comunicação estratégica e contenção de danos.",
+        "features": ["War room 24/7", "Comunicação de crise", "Gestão de stakeholders", "Assessoria jurídica"]
+      },
+      {
+        "title": "Mediação de Conflitos",
+        "description": "Negociação e mediação com famílias, funcionários, sindicatos e órgãos públicos.",
+        "features": ["Mediação extrajudicial", "Acordos trabalhistas", "TAC com MPs", "Negociação com reguladores"]
+      },
+      {
+        "title": "Recuperação e Aprendizado",
+        "description": "Reconstrução de reputação, implementação de melhorias e aprendizado organizacional.",
+        "features": ["Plano de recuperação", "Comunicação pós-crise", "Melhorias estruturais", "Relatório de lições"]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Em crise ou quer prevenir uma?",
+    "subtitle": "Nossa equipe está disponível 24 horas para atender situações de emergência. Para prevenção, agende uma análise de riscos.",
+    "buttonText": "Falar Agora",
+    "buttonLink": "/contato.html"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Contato",
+  "metaDescription": "Entre em contato com a 4E - Agende um diagnóstico gratuito e descubra como podemos transformar sua instituição de ensino.",
+  "hero": {
+    "title": "Vamos <span class=\"text-gradient-animated\">conversar?</span>",
+    "subtitle": "Agende um diagnóstico gratuito e descubra como a 4E pode transformar a gestão da sua instituição de ensino."
+  },
+  "info": {
+    "schedule": {
+      "title": "Horário",
+      "value": "Seg - Sex: 9h às 18h"
+    }
+  },
+  "form": {
+    "title": "Envie uma mensagem",
+    "subtitle": "Preencha o formulário e entraremos em contato em breve.",
+    "fields": {
+      "name": {
+        "label": "Nome completo",
+        "placeholder": "Seu nome",
+        "required": true
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "seu@email.com",
+        "required": true
+      },
+      "phone": {
+        "label": "Telefone",
+        "placeholder": "(11) 99999-9999",
+        "required": false
+      },
+      "institution": {
+        "label": "Instituição",
+        "placeholder": "Nome da sua instituição",
+        "required": false
+      },
+      "interest": {
+        "label": "Área de interesse",
+        "required": true,
+        "options": [
+          { "value": "", "label": "Selecione uma opção" },
+          { "value": "gestao-publica", "label": "Gestão Pública" },
+          { "value": "educacao-privada", "label": "Educação Privada" },
+          { "value": "educacao-corporativa", "label": "Educação Corporativa" },
+          { "value": "gestao-crises", "label": "Gestão de Crises" },
+          { "value": "outro", "label": "Outro" }
+        ]
+      },
+      "message": {
+        "label": "Mensagem",
+        "placeholder": "Conte-nos sobre sua necessidade...",
+        "required": true
+      }
+    },
+    "submitButton": "Enviar Mensagem",
+    "privacyText": "Ao enviar, você concorda com nossa"
+  }
+}
