@@ -2,7 +2,7 @@
 
 backend:
   name: github
-  repo: USUARIO/REPOSITORIO  # Substituir pelo seu repositório
+  repo: viniciusgmuller/site-4e
   branch: main
   base_url: https://decapbridge.com
   auth_endpoint: /api/v1/auth
