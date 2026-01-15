@@ -1,11 +1,35 @@
 # Configuração do Decap CMS para o site 4E
 
+# DecapBridge PKCE auth
 backend:
-  name: github
+  name: git-gateway
   repo: viniciusgmuller/site-4e
   branch: main
-  base_url: https://decapbridge.com
-  auth_endpoint: /api/v1/auth
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/95aca165-ab50-4a87-b16c-cf07b0dfd747/pkce
+  auth_token_endpoint: /sites/95aca165-ab50-4a87-b16c-cf07b0dfd747/token
+  gateway_url: https://gateway.decapbridge.com
+  commit_messages:
+    create: Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    update: Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    delete: Delete {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    uploadMedia: Upload "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    deleteMedia: Delete "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
+
+# PKCE auth fields
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
+
+# Logo do Decap + Bridge
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+
+# URL do site
+site_url: http://site-4e.31.97.85.63.sslip.io
 
 # Pasta para upload de imagens
 media_folder: "src/uploads"
