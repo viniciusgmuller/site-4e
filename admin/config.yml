@@ -29,7 +29,7 @@ auth:
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 
 # URL do site
-site_url: http://site-4e.31.97.85.63.sslip.io
+site_url: https://4e.germanomuller.com
 
 # Pasta para upload de imagens
 media_folder: "src/uploads"
