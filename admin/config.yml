@@ -1,0 +1,125 @@
+# Configuração do Decap CMS para o site 4E
+
+backend:
+  name: github
+  repo: USUARIO/REPOSITORIO  # Substituir pelo seu repositório
+  branch: main
+  base_url: https://decapbridge.com
+  auth_endpoint: /api/v1/auth
+
+# Pasta para upload de imagens
+media_folder: "src/uploads"
+public_folder: "/uploads"
+
+# Idioma do painel
+locale: "pt"
+
+# Coleções (tipos de conteúdo editáveis)
+collections:
+
+  # =====================================
+  # CONFIGURAÇÕES GLOBAIS
+  # =====================================
+  - name: "settings"
+    label: "Configurações"
+    files:
+      - name: "site"
+        label: "Dados do Site"
+        file: "src/_data/site.json"
+        fields:
+          - { name: "title", label: "Nome do Site", widget: "string" }
+          - { name: "description", label: "Descrição (SEO)", widget: "text" }
+          - { name: "email", label: "E-mail de Contato", widget: "string" }
+          - { name: "phone", label: "Telefone", widget: "string" }
+          - { name: "location", label: "Localização", widget: "string" }
+          - label: "Redes Sociais"
+            name: "social"
+            widget: "object"
+            fields:
+              - { name: "linkedin", label: "LinkedIn URL", widget: "string" }
+              - { name: "instagram", label: "Instagram URL", widget: "string" }
+              - { name: "youtube", label: "YouTube URL", widget: "string" }
+
+      - name: "hero"
+        label: "Hero da Home"
+        file: "src/_data/hero.json"
+        fields:
+          - { name: "badge", label: "Badge (texto pequeno)", widget: "string" }
+          - label: "Título"
+            name: "title"
+            widget: "object"
+            fields:
+              - { name: "line1", label: "Linha 1", widget: "string" }
+              - { name: "line2", label: "Linha 2", widget: "string" }
+              - { name: "line3", label: "Linha 3 (destaque)", widget: "string" }
+          - { name: "subtitle", label: "Subtítulo", widget: "text" }
+          - label: "Botão Principal"
+            name: "cta"
+            widget: "object"
+            fields:
+              - label: "Botão Primário"
+                name: "primary"
+                widget: "object"
+                fields:
+                  - { name: "text", label: "Texto", widget: "string" }
+                  - { name: "link", label: "Link", widget: "string" }
+              - label: "Botão Secundário"
+                name: "secondary"
+                widget: "object"
+                fields:
+                  - { name: "text", label: "Texto", widget: "string" }
+                  - { name: "link", label: "Link", widget: "string" }
+
+  # =====================================
+  # ESTATÍSTICAS
+  # =====================================
+  - name: "stats"
+    label: "Estatísticas"
+    file: "src/_data/stats.json"
+    fields:
+      - label: "Estatísticas"
+        name: "stats"
+        widget: "list"
+        fields:
+          - { name: "number", label: "Número", widget: "number" }
+          - { name: "label", label: "Descrição", widget: "string" }
+          - { name: "suffix", label: "Sufixo (%, +, etc)", widget: "string", required: false }
+
+  # =====================================
+  # SERVIÇOS
+  # =====================================
+  - name: "services"
+    label: "Serviços"
+    file: "src/_data/services.json"
+    fields:
+      - label: "Serviços"
+        name: "services"
+        widget: "list"
+        fields:
+          - { name: "id", label: "ID (não alterar)", widget: "string" }
+          - { name: "number", label: "Número", widget: "string" }
+          - { name: "title", label: "Título", widget: "string" }
+          - { name: "description", label: "Descrição curta", widget: "text" }
+          - { name: "link", label: "Link da página", widget: "string" }
+
+  # =====================================
+  # EQUIPE
+  # =====================================
+  - name: "team"
+    label: "Equipe"
+    file: "src/_data/team.json"
+    fields:
+      - label: "Membros da Equipe"
+        name: "team"
+        widget: "list"
+        fields:
+          - { name: "name", label: "Nome", widget: "string" }
+          - { name: "role", label: "Cargo", widget: "string" }
+          - { name: "bio", label: "Biografia", widget: "text" }
+          - { name: "image", label: "Foto", widget: "image", required: false }
+
+  # =====================================
+  # PÁGINAS DE SERVIÇO (futuro)
+  # =====================================
+  # Aqui podem ser adicionadas páginas individuais de serviço
+  # quando o conteúdo for migrado para arquivos Markdown

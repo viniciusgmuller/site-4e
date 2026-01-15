@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="4E - Consultoria em Educação. Impulsionamos administrações públicas e instituições de ensino a alcançar organização, resultados e segurança jurídica.">
+  <title>4E - Consultoria em Educação | Educação, Experiência, Estratégia, Excelência</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://4e-consultoria.netlify.app/">
+  <meta property="og:title" content="4E - Consultoria em Educação">
+  <meta property="og:description" content="Do plano à sala de aula, com método. Impulsionamos administrações públicas e instituições de ensino a alcançar organização, resultados e segurança jurídica.">
+  <meta property="og:image" content="https://4e-consultoria.netlify.app/assets/og-image.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://4e-consultoria.netlify.app/">
+  <meta name="twitter:title" content="4E - Consultoria em Educação">
+  <meta name="twitter:description" content="Do plano à sala de aula, com método. Impulsionamos administrações públicas e instituições de ensino a alcançar organização, resultados e segurança jurídica.">
+  <meta name="twitter:image" content="https://4e-consultoria.netlify.app/assets/og-image.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>4</text></svg>">
+</head>
+<body class="dark">
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">
+      <svg width="120" height="97" viewBox="0 0 793 639" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M387.869 384.444H321.809V229.644H253.02V384.444H77.2263L258.728 0H181.551L0 384.444V449.014H253.02V550.312H321.809V449.014H389.159C385.933 437.649 384.345 425.985 384.345 414.322C384.345 404.297 385.536 394.271 387.869 384.444Z" fill="url(#loader-grad-1)"/>
+        <path d="M672.951 555.374C652.85 567.881 629.126 574.135 601.879 574.135C561.38 574.135 530.162 560.734 508.274 533.983C493.633 516.166 483.905 493.434 479.041 465.839C455.318 473.086 430.006 473.284 406.183 466.485C410.004 492.144 417.399 515.471 428.368 536.465C445.193 568.725 468.718 593.789 498.894 611.755C529.07 629.722 564.457 638.705 604.956 638.705C645.455 638.705 681.041 628.729 713.301 608.728C745.512 588.726 769.682 560.486 785.713 524.057L720.349 501.524C708.884 524.95 693.101 542.917 672.951 555.374Z" fill="url(#loader-grad-2)"/>
+        <path d="M773.653 313.471C759.012 278.084 737.124 250.837 707.941 231.729C678.758 212.62 643.42 203.042 601.879 203.042C560.337 203.042 527.035 212.025 497.355 229.991C467.676 247.958 444.548 273.419 428.02 306.424C419.583 323.199 413.33 341.463 409.21 361.316C419.782 358.537 430.651 357.196 441.47 357.196C454.871 357.196 468.321 359.231 481.225 363.45C486.536 339.925 495.569 320.32 508.274 304.687C530.162 277.687 562.124 264.187 604.162 264.187C643.42 264.187 672.951 276.744 692.853 301.858C708.537 321.66 718.264 349.504 722.036 385.337H495.32C497.554 394.867 498.646 404.594 498.646 414.322C498.646 422.908 497.802 431.494 496.065 439.981H792.612C794.647 391.045 788.294 348.908 773.653 313.471Z" fill="url(#loader-grad-3)"/>
+        <defs>
+          <linearGradient id="loader-grad-1" x1="719.28" y1="613.541" x2="194.134" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+          </linearGradient>
+          <linearGradient id="loader-grad-2" x1="719.28" y1="613.541" x2="194.134" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+          </linearGradient>
+          <linearGradient id="loader-grad-3" x1="719.28" y1="613.541" x2="194.134" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <div class="loader-progress">
+      <div class="loader-progress-bar" id="loader-progress"></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <!-- Logo Branco (visível antes do scroll) -->
+          <svg class="logo-white" width="62" height="50" viewBox="0 0 793 639" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M387.869 384.444H321.809V229.644H253.02V384.444H77.2263L258.728 0H181.551L0 384.444V449.014H253.02V550.312H321.809V449.014H389.159C385.933 437.649 384.345 425.985 384.345 414.322C384.345 404.297 385.536 394.271 387.869 384.444Z" fill="white"/>
+            <path d="M672.951 555.374C652.85 567.881 629.126 574.135 601.879 574.135C561.38 574.135 530.162 560.734 508.274 533.983C493.633 516.166 483.905 493.434 479.041 465.839C455.318 473.086 430.006 473.284 406.183 466.485C410.004 492.144 417.399 515.471 428.368 536.465C445.193 568.725 468.718 593.789 498.894 611.755C529.07 629.722 564.457 638.705 604.956 638.705C645.455 638.705 681.041 628.729 713.301 608.728C745.512 588.726 769.682 560.486 785.713 524.057L720.349 501.524C708.884 524.95 693.101 542.917 672.951 555.374Z" fill="white"/>
+            <path d="M773.653 313.471C759.012 278.084 737.124 250.837 707.941 231.729C678.758 212.62 643.42 203.042 601.879 203.042C560.337 203.042 527.035 212.025 497.355 229.991C467.676 247.958 444.548 273.419 428.02 306.424C419.583 323.199 413.33 341.463 409.21 361.316C419.782 358.537 430.651 357.196 441.47 357.196C454.871 357.196 468.321 359.231 481.225 363.45C486.536 339.925 495.569 320.32 508.274 304.687C530.162 277.687 562.124 264.187 604.162 264.187C643.42 264.187 672.951 276.744 692.853 301.858C708.537 321.66 718.264 349.504 722.036 385.337H495.32C497.554 394.867 498.646 404.594 498.646 414.322C498.646 422.908 497.802 431.494 496.065 439.981H792.612C794.647 391.045 788.294 348.908 773.653 313.471Z" fill="white"/>
+          </svg>
+          <!-- Logo Gradiente (visível após scroll) -->
+          <svg class="logo-gradient" width="62" height="50" viewBox="0 0 793 639" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M387.869 384.444H321.809V229.644H253.02V384.444H77.2263L258.728 0H181.551L0 384.444V449.014H253.02V550.312H321.809V449.014H389.159C385.933 437.649 384.345 425.985 384.345 414.322C384.345 404.297 385.536 394.271 387.869 384.444Z" fill="url(#nav-logo-grad-1)"/>
+            <path d="M672.951 555.374C652.85 567.881 629.126 574.135 601.879 574.135C561.38 574.135 530.162 560.734 508.274 533.983C493.633 516.166 483.905 493.434 479.041 465.839C455.318 473.086 430.006 473.284 406.183 466.485C410.004 492.144 417.399 515.471 428.368 536.465C445.193 568.725 468.718 593.789 498.894 611.755C529.07 629.722 564.457 638.705 604.956 638.705C645.455 638.705 681.041 628.729 713.301 608.728C745.512 588.726 769.682 560.486 785.713 524.057L720.349 501.524C708.884 524.95 693.101 542.917 672.951 555.374Z" fill="url(#nav-logo-grad-2)"/>
+            <path d="M773.653 313.471C759.012 278.084 737.124 250.837 707.941 231.729C678.758 212.62 643.42 203.042 601.879 203.042C560.337 203.042 527.035 212.025 497.355 229.991C467.676 247.958 444.548 273.419 428.02 306.424C419.583 323.199 413.33 341.463 409.21 361.316C419.782 358.537 430.651 357.196 441.47 357.196C454.871 357.196 468.321 359.231 481.225 363.45C486.536 339.925 495.569 320.32 508.274 304.687C530.162 277.687 562.124 264.187 604.162 264.187C643.42 264.187 672.951 276.744 692.853 301.858C708.537 321.66 718.264 349.504 722.036 385.337H495.32C497.554 394.867 498.646 404.594 498.646 414.322C498.646 422.908 497.802 431.494 496.065 439.981H792.612C794.647 391.045 788.294 348.908 773.653 313.471Z" fill="url(#nav-logo-grad-3)"/>
+            <defs>
+              <linearGradient id="nav-logo-grad-1" x1="719.28" y1="613.541" x2="194.134" y2="0" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+              </linearGradient>
+              <linearGradient id="nav-logo-grad-2" x1="719.28" y1="613.541" x2="194.134" y2="0" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+              </linearGradient>
+              <linearGradient id="nav-logo-grad-3" x1="719.28" y1="613.541" x2="194.134" y2="0" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </a>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Início</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link has-dropdown">
+                Soluções
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
+              <div class="nav-dropdown">
+                <a href="gestao-publica.html" class="nav-dropdown-item">
+                  <div class="nav-dropdown-icon">
+                    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M72.9371 72.9371C51.5809 81.4796 27.7631 81.4796 6.40686 72.9371C-2.13562 51.5809 -2.13562 27.7631 6.40686 6.40686C27.7631 -2.13562 51.5809 -2.13562 72.9371 6.40686C81.4796 27.7631 81.4796 51.5809 72.9371 72.9371Z" fill="url(#gp-grad-1)"/>
+                      <path d="M72.9371 72.9371C51.5809 81.4796 27.7631 81.4796 6.40686 72.9371C-2.13562 51.5809 -2.13562 27.7631 6.40686 6.40686C27.7631 -2.13562 51.5809 -2.13562 72.9371 6.40686C81.4796 27.7631 81.4796 51.5809 72.9371 72.9371Z" fill="url(#gp-grad-2)"/>
+                      <defs>
+                        <linearGradient id="gp-grad-1" x1="71.9694" y1="76.2178" x2="6.06334" y2="14.1986" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+                        </linearGradient>
+                        <linearGradient id="gp-grad-2" x1="71.9694" y1="76.2178" x2="6.06334" y2="14.1986" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="nav-dropdown-content">
+                    <h4>Gestão Pública</h4>
+                    <p>Secretarias de educação e administração pública</p>
+                  </div>
+                </a>
+                <a href="educacao-privada.html" class="nav-dropdown-item">
+                  <div class="nav-dropdown-icon">
+                    <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L34.9925 6.99849L69.9849 0V69.9849L34.9925 62.9864L0 69.9849V0Z" fill="url(#ep-grad-1)"/>
+                      <path d="M0 0L34.9925 6.99849L69.9849 0V69.9849L34.9925 62.9864L0 69.9849V0Z" fill="url(#ep-grad-2)"/>
+                      <defs>
+                        <linearGradient id="ep-grad-1" x1="63.4803" y1="67.2275" x2="5.34814" y2="12.5238" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+                        </linearGradient>
+                        <linearGradient id="ep-grad-2" x1="63.4803" y1="67.2275" x2="5.34814" y2="12.5238" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="nav-dropdown-content">
+                    <h4>Educação Privada</h4>
+                    <p>Escolas privadas, IES e grupos educacionais</p>
+                  </div>
+                </a>
+                <a href="educacao-corporativa.html" class="nav-dropdown-item">
+                  <div class="nav-dropdown-icon">
+                    <svg viewBox="0 0 85 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M63.7464 0H21.2464L0 36.8049L21.2464 73.6099H63.7464L85 36.8049L63.7464 0Z" fill="url(#ec-grad-1)"/>
+                      <path d="M63.7464 0H21.2464L0 36.8049L21.2464 73.6099H63.7464L85 36.8049L63.7464 0Z" fill="url(#ec-grad-2)"/>
+                      <defs>
+                        <linearGradient id="ec-grad-1" x1="77.0998" y1="70.7097" x2="16.0545" y2="4.37574" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+                        </linearGradient>
+                        <linearGradient id="ec-grad-2" x1="77.0998" y1="70.7097" x2="16.0545" y2="4.37574" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="nav-dropdown-content">
+                    <h4>Educação Corporativa</h4>
+                    <p>Empresas, fundações e institutos</p>
+                  </div>
+                </a>
+                <a href="gestao-crises.html" class="nav-dropdown-item">
+                  <div class="nav-dropdown-icon">
+                    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M79.3439 39.672C79.3439 61.5822 61.5822 79.3439 39.672 79.3439C17.7617 79.3439 0 61.5822 0 39.672C0 17.7617 17.7617 0 39.672 0C61.5822 0 79.3439 17.7617 79.3439 39.672Z" fill="url(#gc-grad)"/>
+                      <defs>
+                        <linearGradient id="gc-grad" x1="71.9694" y1="76.2178" x2="6.06334" y2="14.1986" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="nav-dropdown-content">
+                    <h4>Gestão de Crises</h4>
+                    <p>Prevenção e resolução de crises institucionais</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="sobre.html" class="nav-link">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a href="contato.html" class="nav-link">Contato</a>
+            </li>
+          </ul>
+          <a href="contato.html" class="btn btn-primary">
+            Fale Conosco
+            <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </nav>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="index.html" class="mobile-nav-link">Início</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="gestao-publica.html" class="mobile-nav-link">Gestão Pública</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="educacao-privada.html" class="mobile-nav-link">Educação Privada</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="educacao-corporativa.html" class="mobile-nav-link">Ed. Corporativa</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="gestao-crises.html" class="mobile-nav-link">Gestão de Crises</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="sobre.html" class="mobile-nav-link">Sobre</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="contato.html" class="mobile-nav-link text-gradient">Contato</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-background">
+        <div class="hero-gradient-orb"></div>
+        <div class="hero-gradient-orb"></div>
+        <div class="hero-gradient-orb"></div>
+        <div class="hero-gradient-orb"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Consultoria especializada em educação
+        </div>
+
+        <h1 class="hero-title">
+          <span class="line"><span class="word">Do plano</span></span>
+          <span class="line"><span class="word">à sala de aula,</span></span>
+          <span class="line"><span class="word text-gradient-animated">com método.</span></span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Impulsionamos administrações públicas e instituições de ensino a alcançar
+          <strong>organização, resultados e segurança jurídica</strong> através da
+          expertise em gestão educacional.
+        </p>
+
+        <div class="hero-cta">
+          <a href="contato.html" class="btn btn-primary btn-lg">
+            Agendar Diagnóstico
+            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#services" class="btn btn-secondary btn-lg">
+            Conhecer Soluções
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee">
+      <div class="marquee-content">
+        <span class="marquee-item"><span>Educação</span> — Experiência — Estratégia — Excelência —</span>
+        <span class="marquee-item"><span>Educação</span> — Experiência — Estratégia — Excelência —</span>
+        <span class="marquee-item"><span>Educação</span> — Experiência — Estratégia — Excelência —</span>
+        <span class="marquee-item"><span>Educação</span> — Experiência — Estratégia — Excelência —</span>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services section-lg" id="services">
+      <div class="container">
+        <div class="services-header reveal">
+          <span class="section-label">Nossas Soluções</span>
+          <h2>Expertise multidisciplinar para <span class="text-gradient">transformar desafios</span> em resultados</h2>
+          <p>Soluções integradas que conectam gestão educacional, compliance, segurança jurídica e gestão de crises para instituições públicas e privadas.</p>
+        </div>
+
+        <div class="services-grid">
+          <a href="gestao-publica.html" class="service-card gestao-publica reveal reveal-delay-1">
+            <span class="service-number">01</span>
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Gestão Pública</h3>
+            <p class="service-description">
+              Consultoria para secretarias de educação com foco em BNCC, Novo Ensino Médio, compliance regulatório e prestação de contas.
+            </p>
+            <span class="service-link">
+              Saiba mais
+              <svg class="service-link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+
+          <a href="educacao-privada.html" class="service-card educacao-privada reveal reveal-delay-2">
+            <span class="service-number">02</span>
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Educação Privada</h3>
+            <p class="service-description">
+              Gestão estratégica para escolas privadas e IES com foco em governança corporativa, contratos e segurança jurídica.
+            </p>
+            <span class="service-link">
+              Saiba mais
+              <svg class="service-link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+
+          <a href="educacao-corporativa.html" class="service-card educacao-corporativa reveal reveal-delay-3">
+            <span class="service-number">03</span>
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Educação Corporativa</h3>
+            <p class="service-description">
+              Estruturação de programas de educação corporativa, universidades corporativas e parcerias educacionais com compliance.
+            </p>
+            <span class="service-link">
+              Saiba mais
+              <svg class="service-link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+
+          <a href="gestao-crises.html" class="service-card gestao-crises reveal reveal-delay-4">
+            <span class="service-number">04</span>
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                <line x1="12" y1="9" x2="12" y2="13"/>
+                <line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Gestão de Crises</h3>
+            <p class="service-description">
+              Prevenção, mediação e resolução de crises institucionais com protocolos especializados para o ambiente educacional.
+            </p>
+            <span class="service-link">
+              Saiba mais
+              <svg class="service-link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal">
+            <div class="stat-number" data-count="150">0</div>
+            <div class="stat-label">Instituições Atendidas</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-1">
+            <div class="stat-number" data-count="25">0</div>
+            <div class="stat-label">Estados Alcançados</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-2">
+            <div class="stat-number" data-count="500">0</div>
+            <div class="stat-label">Crises Resolvidas</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-3">
+            <div class="stat-number" data-count="98">0</div>
+            <div class="stat-label">% de Satisfação</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="about-preview section-lg">
+      <div class="container">
+        <div class="about-preview-grid">
+          <div class="about-preview-content">
+            <span class="section-label reveal" style="color: var(--color-gray-400);">Quem Somos</span>
+            <h2 class="reveal" style="color: var(--color-white); margin-bottom: var(--space-6);">
+              Experiência que transforma a <span class="text-gradient">educação brasileira</span>
+            </h2>
+            <p class="reveal" style="color: var(--color-gray-400); font-size: var(--text-lg); margin-bottom: var(--space-8);">
+              A 4E nasceu da gestão educacional real. Nossa equipe multidisciplinar combina décadas de experiência em direito educacional, gestão pública, compliance e gestão de crises para entregar soluções que funcionam na prática.
+            </p>
+            <a href="sobre.html" class="btn btn-secondary reveal">
+              Conheça Nossa História
+              <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <div class="about-values">
+              <div class="about-value reveal">
+                <h4 class="about-value-title text-gradient">Educação</h4>
+                <p class="about-value-text">Propósito fundador que orienta cada decisão</p>
+              </div>
+              <div class="about-value reveal reveal-delay-1">
+                <h4 class="about-value-title text-gradient">Experiência</h4>
+                <p class="about-value-text">Vivência real em gestão educacional</p>
+              </div>
+              <div class="about-value reveal reveal-delay-2">
+                <h4 class="about-value-title text-gradient">Estratégia</h4>
+                <p class="about-value-text">Visão sistêmica e soluções integradas</p>
+              </div>
+              <div class="about-value reveal reveal-delay-3">
+                <h4 class="about-value-title text-gradient">Excelência</h4>
+                <p class="about-value-text">Padrão inegociável de qualidade</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-preview-visual">
+            <div class="about-logo-large">
+              <svg width="200" height="161" viewBox="0 0 793 639" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M387.869 384.444H321.809V229.644H253.02V384.444H77.2263L258.728 0H181.551L0 384.444V449.014H253.02V550.312H321.809V449.014H389.159C385.933 437.649 384.345 425.985 384.345 414.322C384.345 404.297 385.536 394.271 387.869 384.444Z" fill="url(#about-logo-grad-1)"/>
+                <path d="M672.951 555.374C652.85 567.881 629.126 574.135 601.879 574.135C561.38 574.135 530.162 560.734 508.274 533.983C493.633 516.166 483.905 493.434 479.041 465.839C455.318 473.086 430.006 473.284 406.183 466.485C410.004 492.144 417.399 515.471 428.368 536.465C445.193 568.725 468.718 593.789 498.894 611.755C529.07 629.722 564.457 638.705 604.956 638.705C645.455 638.705 681.041 628.729 713.301 608.728C745.512 588.726 769.682 560.486 785.713 524.057L720.349 501.524C708.884 524.95 693.101 542.917 672.951 555.374Z" fill="url(#about-logo-grad-2)"/>
+                <path d="M773.653 313.471C759.012 278.084 737.124 250.837 707.941 231.729C678.758 212.62 643.42 203.042 601.879 203.042C560.337 203.042 527.035 212.025 497.355 229.991C467.676 247.958 444.548 273.419 428.02 306.424C419.583 323.199 413.33 341.463 409.21 361.316C419.782 358.537 430.651 357.196 441.47 357.196C454.871 357.196 468.321 359.231 481.225 363.45C486.536 339.925 495.569 320.32 508.274 304.687C530.162 277.687 562.124 264.187 604.162 264.187C643.42 264.187 672.951 276.744 692.853 301.858C708.537 321.66 718.264 349.504 722.036 385.337H495.32C497.554 394.867 498.646 404.594 498.646 414.322C498.646 422.908 497.802 431.494 496.065 439.981H792.612C794.647 391.045 788.294 348.908 773.653 313.471Z" fill="url(#about-logo-grad-3)"/>
+                <defs>
+                  <linearGradient id="about-logo-grad-1" x1="719.28" y1="613.541" x2="194.134" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+                  </linearGradient>
+                  <linearGradient id="about-logo-grad-2" x1="719.28" y1="613.541" x2="194.134" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+                  </linearGradient>
+                  <linearGradient id="about-logo-grad-3" x1="719.28" y1="613.541" x2="194.134" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section-lg">
+      <div class="cta-background">
+        <div class="hero-gradient-orb"></div>
+        <div class="hero-gradient-orb"></div>
+      </div>
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title reveal">
+            Pronto para transformar sua <span class="text-gradient-animated">gestão educacional?</span>
+          </h2>
+          <p class="cta-text reveal">
+            Agende um diagnóstico gratuito e descubra como a 4E pode ajudar sua instituição a alcançar novos patamares de organização, resultados e segurança jurídica.
+          </p>
+          <a href="contato.html" class="btn btn-primary btn-lg magnetic reveal">
+            Agendar Diagnóstico Gratuito
+            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="80" height="64" viewBox="0 0 793 639" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M387.869 384.444H321.809V229.644H253.02V384.444H77.2263L258.728 0H181.551L0 384.444V449.014H253.02V550.312H321.809V449.014H389.159C385.933 437.649 384.345 425.985 384.345 414.322C384.345 404.297 385.536 394.271 387.869 384.444Z" fill="url(#footer-logo-grad-1)"/>
+              <path d="M672.951 555.374C652.85 567.881 629.126 574.135 601.879 574.135C561.38 574.135 530.162 560.734 508.274 533.983C493.633 516.166 483.905 493.434 479.041 465.839C455.318 473.086 430.006 473.284 406.183 466.485C410.004 492.144 417.399 515.471 428.368 536.465C445.193 568.725 468.718 593.789 498.894 611.755C529.07 629.722 564.457 638.705 604.956 638.705C645.455 638.705 681.041 628.729 713.301 608.728C745.512 588.726 769.682 560.486 785.713 524.057L720.349 501.524C708.884 524.95 693.101 542.917 672.951 555.374Z" fill="url(#footer-logo-grad-2)"/>
+              <path d="M773.653 313.471C759.012 278.084 737.124 250.837 707.941 231.729C678.758 212.62 643.42 203.042 601.879 203.042C560.337 203.042 527.035 212.025 497.355 229.991C467.676 247.958 444.548 273.419 428.02 306.424C419.583 323.199 413.33 341.463 409.21 361.316C419.782 358.537 430.651 357.196 441.47 357.196C454.871 357.196 468.321 359.231 481.225 363.45C486.536 339.925 495.569 320.32 508.274 304.687C530.162 277.687 562.124 264.187 604.162 264.187C643.42 264.187 672.951 276.744 692.853 301.858C708.537 321.66 718.264 349.504 722.036 385.337H495.32C497.554 394.867 498.646 404.594 498.646 414.322C498.646 422.908 497.802 431.494 496.065 439.981H792.612C794.647 391.045 788.294 348.908 773.653 313.471Z" fill="url(#footer-logo-grad-3)"/>
+              <defs>
+                <linearGradient id="footer-logo-grad-1" x1="719.28" y1="613.541" x2="194.134" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+                </linearGradient>
+                <linearGradient id="footer-logo-grad-2" x1="719.28" y1="613.541" x2="194.134" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+                </linearGradient>
+                <linearGradient id="footer-logo-grad-3" x1="719.28" y1="613.541" x2="194.134" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <p class="footer-tagline">
+            Impulsionamos administrações públicas e instituições de ensino a alcançar organização, resultados e segurança jurídica.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="footer-social-link" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Soluções</h4>
+          <ul class="footer-links">
+            <li><a href="gestao-publica.html" class="footer-link">Gestão Pública</a></li>
+            <li><a href="educacao-privada.html" class="footer-link">Educação Privada</a></li>
+            <li><a href="educacao-corporativa.html" class="footer-link">Educação Corporativa</a></li>
+            <li><a href="gestao-crises.html" class="footer-link">Gestão de Crises</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Empresa</h4>
+          <ul class="footer-links">
+            <li><a href="sobre.html" class="footer-link">Sobre a 4E</a></li>
+            <li><a href="sobre.html#equipe" class="footer-link">Nossa Equipe</a></li>
+            <li><a href="#" class="footer-link">Blog</a></li>
+            <li><a href="contato.html" class="footer-link">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contato</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:contato@4e.com.br" class="footer-link">contato@4e.com.br</a></li>
+            <li><a href="tel:+5511999999999" class="footer-link">+55 (11) 99999-9999</a></li>
+            <li><span class="footer-link">São Paulo, SP</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2025 4E Consultoria em Educação. Todos os direitos reservados.
+        </p>
+        <div class="footer-legal">
+          <a href="#">Política de Privacidade</a>
+          <a href="#">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

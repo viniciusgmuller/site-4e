@@ -1,0 +1,203 @@
+---
+layout: base.njk
+title: 4E - Consultoria em Educação | Educação, Experiência, Estratégia, Excelência
+showLoader: true
+---
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="hero-background">
+    <div class="hero-gradient-orb"></div>
+    <div class="hero-gradient-orb"></div>
+    <div class="hero-gradient-orb"></div>
+    <div class="hero-gradient-orb"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      {{ hero.badge }}
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line"><span class="word">{{ hero.title.line1 }}</span></span>
+      <span class="line"><span class="word">{{ hero.title.line2 }}</span></span>
+      <span class="line"><span class="word text-gradient-animated">{{ hero.title.line3 }}</span></span>
+    </h1>
+
+    <p class="hero-subtitle">
+      {{ hero.subtitle | safe }}
+    </p>
+
+    <div class="hero-cta">
+      <a href="{{ hero.cta.primary.link }}" class="btn btn-primary btn-lg">
+        {{ hero.cta.primary.text }}
+        <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+      <a href="{{ hero.cta.secondary.link }}" class="btn btn-secondary btn-lg">
+        {{ hero.cta.secondary.text }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee">
+  <div class="marquee-content">
+    <span class="marquee-item"><span>Educação</span> — Experiência — Estratégia — Excelência —</span>
+    <span class="marquee-item"><span>Educação</span> — Experiência — Estratégia — Excelência —</span>
+    <span class="marquee-item"><span>Educação</span> — Experiência — Estratégia — Excelência —</span>
+    <span class="marquee-item"><span>Educação</span> — Experiência — Estratégia — Excelência —</span>
+  </div>
+</div>
+
+<!-- Services Section -->
+<section class="services section-lg" id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <span class="section-label">Nossas Soluções</span>
+      <h2>Expertise multidisciplinar para <span class="text-gradient">transformar desafios</span> em resultados</h2>
+      <p>Soluções integradas que conectam gestão educacional, compliance, segurança jurídica e gestão de crises para instituições públicas e privadas.</p>
+    </div>
+
+    <div class="services-grid">
+      {% for service in services %}
+      <a href="/{{ service.link }}" class="service-card {{ service.id }} reveal reveal-delay-{{ loop.index }}">
+        <span class="service-number">{{ service.number }}</span>
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            {% if service.id == "gestao-publica" %}
+            <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/>
+            {% elif service.id == "educacao-privada" %}
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            {% elif service.id == "educacao-corporativa" %}
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            {% elif service.id == "gestao-crises" %}
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+            {% endif %}
+          </svg>
+        </div>
+        <h3 class="service-title">{{ service.title }}</h3>
+        <p class="service-description">{{ service.description }}</p>
+        <span class="service-link">
+          Saiba mais
+          <svg class="service-link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      {% for stat in stats %}
+      <div class="stat-item reveal{% if loop.index > 1 %} reveal-delay-{{ loop.index - 1 }}{% endif %}">
+        <div class="stat-number" data-count="{{ stat.number }}">0</div>
+        <div class="stat-label">{{ stat.label }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- About Preview Section -->
+<section class="about-preview section-lg">
+  <div class="container">
+    <div class="about-preview-grid">
+      <div class="about-preview-content">
+        <span class="section-label reveal" style="color: var(--color-gray-400);">Quem Somos</span>
+        <h2 class="reveal" style="color: var(--color-white); margin-bottom: var(--space-6);">
+          Experiência que transforma a <span class="text-gradient">educação brasileira</span>
+        </h2>
+        <p class="reveal" style="color: var(--color-gray-400); font-size: var(--text-lg); margin-bottom: var(--space-8);">
+          A 4E nasceu da gestão educacional real. Nossa equipe multidisciplinar combina décadas de experiência em direito educacional, gestão pública, compliance e gestão de crises para entregar soluções que funcionam na prática.
+        </p>
+        <a href="/sobre.html" class="btn btn-secondary reveal">
+          Conheça Nossa História
+          <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <div class="about-values">
+          <div class="about-value reveal">
+            <h4 class="about-value-title text-gradient">Educação</h4>
+            <p class="about-value-text">Propósito fundador que orienta cada decisão</p>
+          </div>
+          <div class="about-value reveal reveal-delay-1">
+            <h4 class="about-value-title text-gradient">Experiência</h4>
+            <p class="about-value-text">Vivência real em gestão educacional</p>
+          </div>
+          <div class="about-value reveal reveal-delay-2">
+            <h4 class="about-value-title text-gradient">Estratégia</h4>
+            <p class="about-value-text">Metodologia proprietária de transformação</p>
+          </div>
+          <div class="about-value reveal reveal-delay-3">
+            <h4 class="about-value-title text-gradient">Excelência</h4>
+            <p class="about-value-text">Compromisso com resultados mensuráveis</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-preview-visual">
+        <div class="about-logo-large">
+          <svg width="200" height="161" viewBox="0 0 793 639" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M387.869 384.444H321.809V229.644H253.02V384.444H77.2263L258.728 0H181.551L0 384.444V449.014H253.02V550.312H321.809V449.014H389.159C385.933 437.649 384.345 425.985 384.345 414.322C384.345 404.297 385.536 394.271 387.869 384.444Z" fill="url(#about-logo-grad-1)"/>
+            <path d="M672.951 555.374C652.85 567.881 629.126 574.135 601.879 574.135C561.38 574.135 530.162 560.734 508.274 533.983C493.633 516.166 483.905 493.434 479.041 465.839C455.318 473.086 430.006 473.284 406.183 466.485C410.004 492.144 417.399 515.471 428.368 536.465C445.193 568.725 468.718 593.789 498.894 611.755C529.07 629.722 564.457 638.705 604.956 638.705C645.455 638.705 681.041 628.729 713.301 608.728C745.512 588.726 769.682 560.486 785.713 524.057L720.349 501.524C708.884 524.95 693.101 542.917 672.951 555.374Z" fill="url(#about-logo-grad-2)"/>
+            <path d="M773.653 313.471C759.012 278.084 737.124 250.837 707.941 231.729C678.758 212.62 643.42 203.042 601.879 203.042C560.337 203.042 527.035 212.025 497.355 229.991C467.676 247.958 444.548 273.419 428.02 306.424C419.583 323.199 413.33 341.463 409.21 361.316C419.782 358.537 430.651 357.196 441.47 357.196C454.871 357.196 468.321 359.231 481.225 363.45C486.536 339.925 495.569 320.32 508.274 304.687C530.162 277.687 562.124 264.187 604.162 264.187C643.42 264.187 672.951 276.744 692.853 301.858C708.537 321.66 718.264 349.504 722.036 385.337H495.32C497.554 394.867 498.646 404.594 498.646 414.322C498.646 422.908 497.802 431.494 496.065 439.981H792.612C794.647 391.045 788.294 348.908 773.653 313.471Z" fill="url(#about-logo-grad-3)"/>
+            <defs>
+              <linearGradient id="about-logo-grad-1" x1="719.28" y1="613.541" x2="194.134" y2="0" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+              </linearGradient>
+              <linearGradient id="about-logo-grad-2" x1="719.28" y1="613.541" x2="194.134" y2="0" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+              </linearGradient>
+              <linearGradient id="about-logo-grad-3" x1="719.28" y1="613.541" x2="194.134" y2="0" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFDD5C"/><stop offset="0.5" stop-color="#E09AFD"/><stop offset="1" stop-color="#5BE09F"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section section-lg">
+  <div class="cta-background">
+    <div class="hero-gradient-orb"></div>
+    <div class="hero-gradient-orb"></div>
+  </div>
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title reveal">
+        Pronto para transformar sua <span class="text-gradient-animated">gestão educacional?</span>
+      </h2>
+      <p class="cta-text reveal">
+        Agende um diagnóstico gratuito e descubra como a 4E pode ajudar sua instituição a alcançar novos patamares de organização, resultados e segurança jurídica.
+      </p>
+      <a href="/contato.html" class="btn btn-primary btn-lg magnetic reveal">
+        Agendar Diagnóstico Gratuito
+        <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

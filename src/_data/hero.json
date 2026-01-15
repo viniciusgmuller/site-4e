@@ -1,0 +1,19 @@
+{
+  "badge": "Consultoria especializada em educação",
+  "title": {
+    "line1": "Do plano",
+    "line2": "à sala de aula,",
+    "line3": "com método."
+  },
+  "subtitle": "Impulsionamos administrações públicas e instituições de ensino a alcançar <strong>organização, resultados e segurança jurídica</strong> através da expertise em gestão educacional.",
+  "cta": {
+    "primary": {
+      "text": "Agendar Diagnóstico",
+      "link": "contato.html"
+    },
+    "secondary": {
+      "text": "Conhecer Soluções",
+      "link": "#services"
+    }
+  }
+}

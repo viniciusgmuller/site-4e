@@ -1,0 +1,13 @@
+{
+  "name": "site-4e",
+  "version": "1.0.0",
+  "description": "Site institucional 4E Consultoria em Educação",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
