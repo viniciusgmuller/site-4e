@@ -5,184 +5,185 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
   <title>4E - Painel Admin</title>
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@3.9.0/dist/decap-cms.js"></script>
   <script>
-    CMS.init({
-      config: {
-        backend: {
-          name: "git-gateway",
-          repo: "viniciusgmuller/site-4e",
-          branch: "main",
-          auth_type: "pkce",
-          base_url: "https://auth.decapbridge.com",
-          auth_endpoint: "/sites/95aca165-ab50-4a87-b16c-cf07b0dfd747/pkce",
-          auth_token_endpoint: "/sites/95aca165-ab50-4a87-b16c-cf07b0dfd747/token",
-          gateway_url: "https://gateway.decapbridge.com",
-          commit_messages: {
-            create: 'Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge',
-            update: 'Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge',
-            delete: 'Delete {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge',
-            uploadMedia: 'Upload "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge',
-            deleteMedia: 'Delete "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge',
-            openAuthoring: 'Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge'
-          }
+    const config = {
+      backend: {
+        name: "git-gateway",
+        repo: "viniciusgmuller/site-4e",
+        branch: "main",
+        auth_type: "pkce",
+        base_url: "https://auth.decapbridge.com",
+        auth_endpoint: "/sites/95aca165-ab50-4a87-b16c-cf07b0dfd747/pkce",
+        auth_token_endpoint: "/sites/95aca165-ab50-4a87-b16c-cf07b0dfd747/token",
+        gateway_url: "https://gateway.decapbridge.com",
+        commit_messages: {
+          create: 'Create {{collection}} "{{slug}}"',
+          update: 'Update {{collection}} "{{slug}}"',
+          delete: 'Delete {{collection}} "{{slug}}"',
+          uploadMedia: 'Upload "{{path}}"',
+          deleteMedia: 'Delete "{{path}}"'
+        }
+      },
+      logo_url: "https://decapbridge.com/decapcms-with-bridge.svg",
+      site_url: "https://4e.germanomuller.com",
+      media_folder: "src/uploads",
+      public_folder: "/uploads",
+      locale: "pt",
+      collections: [
+        {
+          name: "settings",
+          label: "Configurações",
+          files: [
+            {
+              name: "site",
+              label: "Dados do Site",
+              file: "src/_data/site.json",
+              fields: [
+                { name: "title", label: "Nome do Site", widget: "string" },
+                { name: "description", label: "Descrição (SEO)", widget: "text" },
+                { name: "email", label: "E-mail de Contato", widget: "string" },
+                { name: "phone", label: "Telefone", widget: "string" },
+                { name: "location", label: "Localização", widget: "string" },
+                {
+                  label: "Redes Sociais",
+                  name: "social",
+                  widget: "object",
+                  fields: [
+                    { name: "linkedin", label: "LinkedIn URL", widget: "string" },
+                    { name: "instagram", label: "Instagram URL", widget: "string" },
+                    { name: "youtube", label: "YouTube URL", widget: "string" }
+                  ]
+                }
+              ]
+            },
+            {
+              name: "hero",
+              label: "Hero da Home",
+              file: "src/_data/hero.json",
+              fields: [
+                { name: "badge", label: "Badge (texto pequeno)", widget: "string" },
+                {
+                  label: "Título",
+                  name: "title",
+                  widget: "object",
+                  fields: [
+                    { name: "line1", label: "Linha 1", widget: "string" },
+                    { name: "line2", label: "Linha 2", widget: "string" },
+                    { name: "line3", label: "Linha 3 (destaque)", widget: "string" }
+                  ]
+                },
+                { name: "subtitle", label: "Subtítulo", widget: "text" },
+                {
+                  label: "Botões",
+                  name: "cta",
+                  widget: "object",
+                  fields: [
+                    {
+                      label: "Botão Primário",
+                      name: "primary",
+                      widget: "object",
+                      fields: [
+                        { name: "text", label: "Texto", widget: "string" },
+                        { name: "link", label: "Link", widget: "string" }
+                      ]
+                    },
+                    {
+                      label: "Botão Secundário",
+                      name: "secondary",
+                      widget: "object",
+                      fields: [
+                        { name: "text", label: "Texto", widget: "string" },
+                        { name: "link", label: "Link", widget: "string" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
-        load_config_file: false,
-        logo_url: "https://decapbridge.com/decapcms-with-bridge.svg",
-        site_url: "https://4e.germanomuller.com",
-        media_folder: "src/uploads",
-        public_folder: "/uploads",
-        locale: "pt",
-        collections: [
-          {
-            name: "settings",
-            label: "Configurações",
-            files: [
-              {
-                name: "site",
-                label: "Dados do Site",
-                file: "src/_data/site.json",
-                fields: [
-                  { name: "title", label: "Nome do Site", widget: "string" },
-                  { name: "description", label: "Descrição (SEO)", widget: "text" },
-                  { name: "email", label: "E-mail de Contato", widget: "string" },
-                  { name: "phone", label: "Telefone", widget: "string" },
-                  { name: "location", label: "Localização", widget: "string" },
-                  {
-                    label: "Redes Sociais",
-                    name: "social",
-                    widget: "object",
-                    fields: [
-                      { name: "linkedin", label: "LinkedIn URL", widget: "string" },
-                      { name: "instagram", label: "Instagram URL", widget: "string" },
-                      { name: "youtube", label: "YouTube URL", widget: "string" }
-                    ]
-                  }
-                ]
-              },
-              {
-                name: "hero",
-                label: "Hero da Home",
-                file: "src/_data/hero.json",
-                fields: [
-                  { name: "badge", label: "Badge (texto pequeno)", widget: "string" },
-                  {
-                    label: "Título",
-                    name: "title",
-                    widget: "object",
-                    fields: [
-                      { name: "line1", label: "Linha 1", widget: "string" },
-                      { name: "line2", label: "Linha 2", widget: "string" },
-                      { name: "line3", label: "Linha 3 (destaque)", widget: "string" }
-                    ]
-                  },
-                  { name: "subtitle", label: "Subtítulo", widget: "text" },
-                  {
-                    label: "Botões",
-                    name: "cta",
-                    widget: "object",
-                    fields: [
-                      {
-                        label: "Botão Primário",
-                        name: "primary",
-                        widget: "object",
-                        fields: [
-                          { name: "text", label: "Texto", widget: "string" },
-                          { name: "link", label: "Link", widget: "string" }
-                        ]
-                      },
-                      {
-                        label: "Botão Secundário",
-                        name: "secondary",
-                        widget: "object",
-                        fields: [
-                          { name: "text", label: "Texto", widget: "string" },
-                          { name: "link", label: "Link", widget: "string" }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            name: "stats",
-            label: "Estatísticas",
-            files: [
-              {
-                name: "stats",
-                label: "Números",
-                file: "src/_data/stats.json",
-                fields: [
-                  {
-                    label: "Estatísticas",
-                    name: "stats",
-                    widget: "list",
-                    fields: [
-                      { name: "number", label: "Número", widget: "number" },
-                      { name: "label", label: "Descrição", widget: "string" },
-                      { name: "suffix", label: "Sufixo (%, +, etc)", widget: "string", required: false }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            name: "services",
-            label: "Serviços",
-            files: [
-              {
-                name: "services",
-                label: "Lista de Serviços",
-                file: "src/_data/services.json",
-                fields: [
-                  {
-                    label: "Serviços",
-                    name: "services",
-                    widget: "list",
-                    fields: [
-                      { name: "id", label: "ID (não alterar)", widget: "string" },
-                      { name: "number", label: "Número", widget: "string" },
-                      { name: "title", label: "Título", widget: "string" },
-                      { name: "description", label: "Descrição curta", widget: "text" },
-                      { name: "link", label: "Link da página", widget: "string" }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            name: "team",
-            label: "Equipe",
-            files: [
-              {
-                name: "team",
-                label: "Membros",
-                file: "src/_data/team.json",
-                fields: [
-                  {
-                    label: "Membros da Equipe",
-                    name: "team",
-                    widget: "list",
-                    fields: [
-                      { name: "name", label: "Nome", widget: "string" },
-                      { name: "role", label: "Cargo", widget: "string" },
-                      { name: "bio", label: "Biografia", widget: "text" },
-                      { name: "image", label: "Foto", widget: "image", required: false }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    });
+        {
+          name: "stats",
+          label: "Estatísticas",
+          files: [
+            {
+              name: "stats",
+              label: "Números",
+              file: "src/_data/stats.json",
+              fields: [
+                {
+                  label: "Estatísticas",
+                  name: "stats",
+                  widget: "list",
+                  fields: [
+                    { name: "number", label: "Número", widget: "number" },
+                    { name: "label", label: "Descrição", widget: "string" },
+                    { name: "suffix", label: "Sufixo (%, +, etc)", widget: "string", required: false }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: "services",
+          label: "Serviços",
+          files: [
+            {
+              name: "services",
+              label: "Lista de Serviços",
+              file: "src/_data/services.json",
+              fields: [
+                {
+                  label: "Serviços",
+                  name: "services",
+                  widget: "list",
+                  fields: [
+                    { name: "id", label: "ID (não alterar)", widget: "string" },
+                    { name: "number", label: "Número", widget: "string" },
+                    { name: "title", label: "Título", widget: "string" },
+                    { name: "description", label: "Descrição curta", widget: "text" },
+                    { name: "link", label: "Link da página", widget: "string" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: "team",
+          label: "Equipe",
+          files: [
+            {
+              name: "team",
+              label: "Membros",
+              file: "src/_data/team.json",
+              fields: [
+                {
+                  label: "Membros da Equipe",
+                  name: "team",
+                  widget: "list",
+                  fields: [
+                    { name: "name", label: "Nome", widget: "string" },
+                    { name: "role", label: "Cargo", widget: "string" },
+                    { name: "bio", label: "Biografia", widget: "text" },
+                    { name: "image", label: "Foto", widget: "image", required: false }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    };
+
+    CMS.init({ config });
   </script>
 </body>
 </html>
