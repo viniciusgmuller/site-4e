@@ -1927,7 +1927,15 @@ a {
   max-width: 400px;
   aspect-ratio: 1;
   margin: 0 auto;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.15;
+}
+
+.sp-purpose-symbol svg {
+  width: 100%;
+  height: 100%;
 }
 
 .sp-purpose-content h2 {
