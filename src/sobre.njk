@@ -30,7 +30,7 @@ showLoader: false
     <div class="about-preview-grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-20); align-items: center;">
       <div>
         <span class="section-label reveal">{{ pages.sobre.purpose.label }}</span>
-        <h2 class="reveal" style="margin-bottom: var(--space-6);">
+        <h2 class="reveal" style="margin-bottom: var(--space-6); color: var(--color-gray-900);">
           {{ pages.sobre.purpose.title | safe }}
         </h2>
         {% for paragraph in pages.sobre.purpose.paragraphs %}
@@ -75,7 +75,7 @@ showLoader: false
   <div class="container">
     <div style="text-align: center; margin-bottom: var(--space-16);">
       <span class="section-label reveal">{{ pages.sobre.essence.label }}</span>
-      <h2 class="reveal">{{ pages.sobre.essence.title | safe }}</h2>
+      <h2 class="reveal" style="color: var(--color-gray-900);">{{ pages.sobre.essence.title | safe }}</h2>
     </div>
 
     <div class="services-grid" style="grid-template-columns: repeat(3, 1fr);">
@@ -97,7 +97,7 @@ showLoader: false
   <div class="container">
     <div style="text-align: center; margin-bottom: var(--space-16);">
       <span class="section-label reveal">{{ pages.sobre.team.label }}</span>
-      <h2 class="reveal">{{ pages.sobre.team.title | safe }}</h2>
+      <h2 class="reveal" style="color: var(--color-gray-900);">{{ pages.sobre.team.title | safe }}</h2>
       <p class="reveal" style="color: var(--color-gray-600); max-width: 600px; margin: var(--space-4) auto 0;">
         {{ pages.sobre.team.subtitle }}
       </p>
