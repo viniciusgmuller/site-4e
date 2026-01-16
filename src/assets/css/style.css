@@ -2016,7 +2016,7 @@ a {
   width: 56px;
   height: 56px;
   border-radius: var(--radius-lg);
-  background: rgba(125, 250, 180, 0.15);
+  background: var(--sp-color-light, rgba(125, 250, 180, 0.15));
   display: flex;
   align-items: center;
   justify-content: center;
