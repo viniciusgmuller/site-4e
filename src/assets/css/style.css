@@ -2097,6 +2097,10 @@ a {
   margin: 0 auto var(--space-16);
 }
 
+.sp-process-header h2 {
+  color: var(--color-gray-900);
+}
+
 .sp-process-timeline {
   display: flex;
   justify-content: space-between;
@@ -2199,6 +2203,10 @@ a {
   text-align: center;
   max-width: 700px;
   margin: 0 auto var(--space-16);
+}
+
+.sp-cases-header h2 {
+  color: var(--color-gray-900);
 }
 
 .sp-cases-grid {
