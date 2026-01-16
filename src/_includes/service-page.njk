@@ -8,6 +8,9 @@
 
   <div class="container">
     <div class="sp-hero-content">
+      <div class="sp-hero-logo reveal">
+        {% include "icons/" + pageData.id + "-logo.njk" ignore missing %}
+      </div>
       <h1 class="sp-hero-title reveal">
         {{ pageData.hero.title | safe }}
       </h1>
