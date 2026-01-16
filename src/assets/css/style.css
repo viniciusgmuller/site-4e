@@ -1981,6 +1981,85 @@ a {
   line-height: 1.6;
 }
 
+/* ---------- Solution Page Services ---------- */
+.sp-services {
+  background: var(--color-white);
+  padding: var(--space-32) 0;
+}
+
+.sp-services .sp-section-header h2 {
+  color: var(--color-gray-900);
+}
+
+.sp-services .sp-section-header p {
+  color: var(--color-gray-600);
+}
+
+.sp-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+}
+
+.sp-service-card {
+  background: var(--color-gray-100);
+  padding: var(--space-8);
+  border-radius: var(--radius-2xl);
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.sp-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.sp-service-number {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  color: var(--sp-color, var(--gradient-start));
+  opacity: 0.2;
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-6);
+  line-height: 1;
+}
+
+.sp-service-title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+  color: var(--color-gray-900);
+}
+
+.sp-service-description {
+  font-size: var(--text-base);
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-6);
+}
+
+.sp-service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sp-service-features li {
+  font-size: var(--text-sm);
+  color: var(--color-gray-700);
+  padding: var(--space-2) 0;
+  padding-left: var(--space-6);
+  position: relative;
+}
+
+.sp-service-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--sp-color, var(--gradient-start));
+  font-weight: 600;
+}
+
 /* ---------- Solution Page Solutions ---------- */
 .sp-solutions {
   background: var(--color-black);
