@@ -1214,6 +1214,48 @@ a {
   margin-bottom: var(--space-10);
 }
 
+/* ---------- WhatsApp Button ---------- */
+.whatsapp-btn {
+  position: fixed;
+  bottom: var(--space-8);
+  right: var(--space-8);
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: all var(--transition-base);
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-btn svg {
+  width: 32px;
+  height: 32px;
+  fill: white;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-btn {
+    bottom: var(--space-6);
+    right: var(--space-6);
+    width: 56px;
+    height: 56px;
+  }
+
+  .whatsapp-btn svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
 /* ---------- Footer ---------- */
 .footer {
   background: var(--color-black);
@@ -1983,16 +2025,17 @@ a {
 
 /* ---------- Solution Page Services ---------- */
 .sp-services {
-  background: var(--color-white);
+  background: var(--color-black);
   padding: var(--space-32) 0;
+  position: relative;
 }
 
 .sp-services .sp-section-header h2 {
-  color: var(--color-gray-900);
+  color: var(--color-white);
 }
 
 .sp-services .sp-section-header p {
-  color: var(--color-gray-600);
+  color: var(--color-gray-400);
 }
 
 .sp-services-grid {
@@ -2002,7 +2045,8 @@ a {
 }
 
 .sp-service-card {
-  background: var(--color-gray-100);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: var(--space-8);
   border-radius: var(--radius-2xl);
   position: relative;
@@ -2011,7 +2055,8 @@ a {
 
 .sp-service-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .sp-service-number {
@@ -2019,7 +2064,7 @@ a {
   font-size: var(--text-5xl);
   font-weight: 700;
   color: var(--sp-color, var(--gradient-start));
-  opacity: 0.2;
+  opacity: 0.3;
   position: absolute;
   top: var(--space-4);
   right: var(--space-6);
@@ -2029,12 +2074,12 @@ a {
 .sp-service-title {
   font-size: var(--text-xl);
   margin-bottom: var(--space-4);
-  color: var(--color-gray-900);
+  color: var(--color-white);
 }
 
 .sp-service-description {
   font-size: var(--text-base);
-  color: var(--color-gray-600);
+  color: var(--color-gray-400);
   margin-bottom: var(--space-6);
 }
 
@@ -2046,7 +2091,7 @@ a {
 
 .sp-service-features li {
   font-size: var(--text-sm);
-  color: var(--color-gray-700);
+  color: var(--color-gray-300);
   padding: var(--space-2) 0;
   padding-left: var(--space-6);
   position: relative;
