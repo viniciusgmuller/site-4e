@@ -1,0 +1,506 @@
+# Configuração do Decap CMS para o site 4E
+
+# DecapBridge PKCE auth
+backend:
+  name: github
+  repo: viniciusgmuller/site-4e
+  branch: main
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/95aca165-ab50-4a87-b16c-cf07b0dfd747/pkce
+  commit_messages:
+    create: Create {{collection}} "{{slug}}" via DecapCMS
+    update: Update {{collection}} "{{slug}}" via DecapCMS
+    delete: Delete {{collection}} "{{slug}}" via DecapCMS
+    uploadMedia: Upload "{{path}}" via DecapCMS
+    deleteMedia: Delete "{{path}}" via DecapCMS
+
+# Logo do Decap + Bridge
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+
+# URL do site
+site_url: https://4e.germanomuller.com
+
+# Pasta para upload de imagens
+media_folder: "src/uploads"
+public_folder: "/uploads"
+
+# Idioma do painel
+locale: "pt"
+
+# Coleções (tipos de conteúdo editáveis)
+collections:
+
+  # =====================================
+  # CONFIGURAÇÕES GLOBAIS
+  # =====================================
+  - name: "settings"
+    label: "⚙️ Configurações"
+    files:
+      - name: "site"
+        label: "Dados do Site"
+        file: "src/_data/site.json"
+        fields:
+          - { name: "title", label: "Nome do Site", widget: "string" }
+          - { name: "description", label: "Descrição (SEO)", widget: "text" }
+          - { name: "email", label: "E-mail de Contato", widget: "string" }
+          - { name: "phone", label: "Telefone", widget: "string" }
+          - { name: "location", label: "Localização", widget: "string" }
+          - label: "Redes Sociais"
+            name: "social"
+            widget: "object"
+            fields:
+              - { name: "linkedin", label: "LinkedIn URL", widget: "string" }
+              - { name: "instagram", label: "Instagram URL", widget: "string" }
+              - { name: "youtube", label: "YouTube URL", widget: "string" }
+
+  # =====================================
+  # HOMEPAGE
+  # =====================================
+  - name: "homepage"
+    label: "🏠 Homepage"
+    files:
+      - name: "hero"
+        label: "Hero da Home"
+        file: "src/_data/hero.json"
+        fields:
+          - { name: "badge", label: "Badge (texto pequeno)", widget: "string" }
+          - label: "Título"
+            name: "title"
+            widget: "object"
+            fields:
+              - { name: "line1", label: "Linha 1", widget: "string" }
+              - { name: "line2", label: "Linha 2", widget: "string" }
+              - { name: "line3", label: "Linha 3 (destaque)", widget: "string" }
+          - { name: "subtitle", label: "Subtítulo", widget: "text" }
+          - label: "Botões CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - label: "Botão Primário"
+                name: "primary"
+                widget: "object"
+                fields:
+                  - { name: "text", label: "Texto", widget: "string" }
+                  - { name: "link", label: "Link", widget: "string" }
+              - label: "Botão Secundário"
+                name: "secondary"
+                widget: "object"
+                fields:
+                  - { name: "text", label: "Texto", widget: "string" }
+                  - { name: "link", label: "Link", widget: "string" }
+
+      - name: "stats"
+        label: "Estatísticas"
+        file: "src/_data/stats.json"
+        fields:
+          - label: "Estatísticas"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { name: "number", label: "Número", widget: "number" }
+              - { name: "label", label: "Descrição", widget: "string" }
+              - { name: "suffix", label: "Sufixo (%, +, etc)", widget: "string", required: false }
+
+      - name: "services"
+        label: "Serviços (Cards)"
+        file: "src/_data/services.json"
+        fields:
+          - label: "Serviços"
+            name: "services"
+            widget: "list"
+            fields:
+              - { name: "id", label: "ID (não alterar)", widget: "string" }
+              - { name: "number", label: "Número", widget: "string" }
+              - { name: "title", label: "Título", widget: "string" }
+              - { name: "description", label: "Descrição curta", widget: "text" }
+              - { name: "link", label: "Link da página", widget: "string" }
+
+  # =====================================
+  # PÁGINA SOBRE
+  # =====================================
+  - name: "sobre"
+    label: "📖 Página Sobre"
+    files:
+      - name: "sobre"
+        label: "Conteúdo da Página"
+        file: "src/_data/pages/sobre.json"
+        fields:
+          - { name: "title", label: "Título da Página", widget: "string" }
+          - { name: "metaDescription", label: "Meta Description (SEO)", widget: "text" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "text", label: "Texto", widget: "text" }
+          - label: "Propósito"
+            name: "purpose"
+            widget: "object"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "paragraphs", label: "Parágrafos", widget: "list", field: { name: "paragraph", widget: "text" } }
+          - label: "Os 4 Pilares"
+            name: "pillars"
+            widget: "object"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - label: "Pilares"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { name: "letter", label: "Letra", widget: "string" }
+                  - { name: "name", label: "Nome", widget: "string" }
+                  - { name: "color", label: "Cor (gestao-publica, educacao-privada, educacao-corporativa, gestao-crises)", widget: "string" }
+                  - { name: "description", label: "Descrição", widget: "text" }
+          - label: "Essência"
+            name: "essence"
+            widget: "object"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - label: "Itens"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { name: "title", label: "Título", widget: "string" }
+                  - { name: "description", label: "Descrição", widget: "text" }
+          - label: "Equipe"
+            name: "team"
+            widget: "object"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+          - label: "CTA Final"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - { name: "buttonText", label: "Texto do Botão", widget: "string" }
+              - { name: "buttonLink", label: "Link do Botão", widget: "string" }
+
+  # =====================================
+  # EQUIPE
+  # =====================================
+  - name: "team"
+    label: "👥 Equipe"
+    files:
+      - name: "team"
+        label: "Membros da Equipe"
+        file: "src/_data/team.json"
+        fields:
+          - label: "Membros"
+            name: "team"
+            widget: "list"
+            fields:
+              - { name: "name", label: "Nome", widget: "string" }
+              - { name: "role", label: "Cargo", widget: "string" }
+              - { name: "bio", label: "Biografia", widget: "text" }
+              - { name: "image", label: "Foto", widget: "image", required: false }
+
+  # =====================================
+  # PÁGINA CONTATO
+  # =====================================
+  - name: "contato"
+    label: "📬 Página Contato"
+    files:
+      - name: "contato"
+        label: "Conteúdo da Página"
+        file: "src/_data/pages/contato.json"
+        fields:
+          - { name: "title", label: "Título da Página", widget: "string" }
+          - { name: "metaDescription", label: "Meta Description (SEO)", widget: "text" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+          - label: "Informações Adicionais"
+            name: "info"
+            widget: "object"
+            fields:
+              - label: "Horário"
+                name: "schedule"
+                widget: "object"
+                fields:
+                  - { name: "title", label: "Título", widget: "string" }
+                  - { name: "value", label: "Valor", widget: "string" }
+          - label: "Formulário"
+            name: "form"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Título", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - { name: "submitButton", label: "Texto do Botão", widget: "string" }
+              - { name: "privacyText", label: "Texto de Privacidade", widget: "string" }
+
+  # =====================================
+  # PÁGINAS DE SERVIÇOS
+  # =====================================
+  - name: "servicos"
+    label: "🎯 Páginas de Serviços"
+    files:
+      # Gestão Pública
+      - name: "gestao-publica"
+        label: "Gestão Pública"
+        file: "src/_data/pages/gestao-publica.json"
+        fields:
+          - { name: "id", label: "ID (não alterar)", widget: "hidden", default: "gestao-publica" }
+          - { name: "title", label: "Título da Página", widget: "string" }
+          - { name: "metaDescription", label: "Meta Description (SEO)", widget: "text" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - label: "Estatísticas"
+                name: "stats"
+                widget: "list"
+                max: 3
+                fields:
+                  - { name: "number", label: "Número", widget: "string" }
+                  - { name: "label", label: "Label", widget: "string" }
+          - label: "Propósito"
+            name: "purpose"
+            widget: "object"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "paragraphs", label: "Parágrafos", widget: "list", field: { name: "paragraph", widget: "text" } }
+          - label: "Desafios"
+            name: "challenges"
+            widget: "object"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - label: "Itens"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { name: "icon", label: "Ícone (document, clock, shield, users, money, chart)", widget: "string" }
+                  - { name: "title", label: "Título", widget: "string" }
+                  - { name: "description", label: "Descrição", widget: "text" }
+          - label: "Serviços"
+            name: "services"
+            widget: "object"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - label: "Itens"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { name: "title", label: "Título", widget: "string" }
+                  - { name: "description", label: "Descrição", widget: "text" }
+                  - { name: "features", label: "Características", widget: "list", field: { name: "feature", widget: "string" } }
+          - label: "CTA Final"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Título", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - { name: "buttonText", label: "Texto do Botão", widget: "string" }
+              - { name: "buttonLink", label: "Link do Botão", widget: "string" }
+
+      # Educação Privada
+      - name: "educacao-privada"
+        label: "Educação Privada"
+        file: "src/_data/pages/educacao-privada.json"
+        fields:
+          - { name: "id", label: "ID (não alterar)", widget: "hidden", default: "educacao-privada" }
+          - { name: "title", label: "Título da Página", widget: "string" }
+          - { name: "metaDescription", label: "Meta Description (SEO)", widget: "text" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - label: "Estatísticas"
+                name: "stats"
+                widget: "list"
+                max: 3
+                fields:
+                  - { name: "number", label: "Número", widget: "string" }
+                  - { name: "label", label: "Label", widget: "string" }
+          - label: "Propósito"
+            name: "purpose"
+            widget: "object"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "paragraphs", label: "Parágrafos", widget: "list", field: { name: "paragraph", widget: "text" } }
+          - label: "Desafios"
+            name: "challenges"
+            widget: "object"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - label: "Itens"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { name: "icon", label: "Ícone", widget: "string" }
+                  - { name: "title", label: "Título", widget: "string" }
+                  - { name: "description", label: "Descrição", widget: "text" }
+          - label: "Serviços"
+            name: "services"
+            widget: "object"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - label: "Itens"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { name: "title", label: "Título", widget: "string" }
+                  - { name: "description", label: "Descrição", widget: "text" }
+                  - { name: "features", label: "Características", widget: "list", field: { name: "feature", widget: "string" } }
+          - label: "CTA Final"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Título", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - { name: "buttonText", label: "Texto do Botão", widget: "string" }
+              - { name: "buttonLink", label: "Link do Botão", widget: "string" }
+
+      # Educação Corporativa
+      - name: "educacao-corporativa"
+        label: "Educação Corporativa"
+        file: "src/_data/pages/educacao-corporativa.json"
+        fields:
+          - { name: "id", label: "ID (não alterar)", widget: "hidden", default: "educacao-corporativa" }
+          - { name: "title", label: "Título da Página", widget: "string" }
+          - { name: "metaDescription", label: "Meta Description (SEO)", widget: "text" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - label: "Estatísticas"
+                name: "stats"
+                widget: "list"
+                max: 3
+                fields:
+                  - { name: "number", label: "Número", widget: "string" }
+                  - { name: "label", label: "Label", widget: "string" }
+          - label: "Propósito"
+            name: "purpose"
+            widget: "object"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "paragraphs", label: "Parágrafos", widget: "list", field: { name: "paragraph", widget: "text" } }
+          - label: "Desafios"
+            name: "challenges"
+            widget: "object"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - label: "Itens"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { name: "icon", label: "Ícone", widget: "string" }
+                  - { name: "title", label: "Título", widget: "string" }
+                  - { name: "description", label: "Descrição", widget: "text" }
+          - label: "Serviços"
+            name: "services"
+            widget: "object"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - label: "Itens"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { name: "title", label: "Título", widget: "string" }
+                  - { name: "description", label: "Descrição", widget: "text" }
+                  - { name: "features", label: "Características", widget: "list", field: { name: "feature", widget: "string" } }
+          - label: "CTA Final"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Título", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - { name: "buttonText", label: "Texto do Botão", widget: "string" }
+              - { name: "buttonLink", label: "Link do Botão", widget: "string" }
+
+      # Gestão de Crises
+      - name: "gestao-crises"
+        label: "Gestão de Crises"
+        file: "src/_data/pages/gestao-crises.json"
+        fields:
+          - { name: "id", label: "ID (não alterar)", widget: "hidden", default: "gestao-crises" }
+          - { name: "title", label: "Título da Página", widget: "string" }
+          - { name: "metaDescription", label: "Meta Description (SEO)", widget: "text" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - label: "Estatísticas"
+                name: "stats"
+                widget: "list"
+                max: 3
+                fields:
+                  - { name: "number", label: "Número", widget: "string" }
+                  - { name: "label", label: "Label", widget: "string" }
+          - label: "Propósito"
+            name: "purpose"
+            widget: "object"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "paragraphs", label: "Parágrafos", widget: "list", field: { name: "paragraph", widget: "text" } }
+          - label: "Desafios/Tipos de Crises"
+            name: "challenges"
+            widget: "object"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - label: "Itens"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { name: "icon", label: "Ícone", widget: "string" }
+                  - { name: "title", label: "Título", widget: "string" }
+                  - { name: "description", label: "Descrição", widget: "text" }
+          - label: "Serviços"
+            name: "services"
+            widget: "object"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "title", label: "Título (HTML permitido)", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - label: "Itens"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { name: "title", label: "Título", widget: "string" }
+                  - { name: "description", label: "Descrição", widget: "text" }
+                  - { name: "features", label: "Características", widget: "list", field: { name: "feature", widget: "string" } }
+          - label: "CTA Final"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Título", widget: "string" }
+              - { name: "subtitle", label: "Subtítulo", widget: "text" }
+              - { name: "buttonText", label: "Texto do Botão", widget: "string" }
+              - { name: "buttonLink", label: "Link do Botão", widget: "string" }

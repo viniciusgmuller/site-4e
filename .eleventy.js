@@ -11,6 +11,9 @@ module.exports = function(eleventyConfig) {
   // Copiar pasta admin (Decap CMS)
   eleventyConfig.addPassthroughCopy("admin");
 
+  // Copiar config.yml para raiz (DecapCMS busca na raiz)
+  eleventyConfig.addPassthroughCopy("src/config.yml");
+
   // Configurar watch para arquivos adicionais
   eleventyConfig.addWatchTarget("src/assets/");
 
