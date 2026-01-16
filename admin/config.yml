@@ -55,6 +55,7 @@ collections:
           - { name: "description", label: "Descrição (SEO)", widget: "text" }
           - { name: "email", label: "E-mail de Contato", widget: "string" }
           - { name: "phone", label: "Telefone", widget: "string" }
+          - { name: "whatsapp", label: "WhatsApp (apenas números com DDI+DDD)", widget: "string", hint: "Ex: 5554999999999" }
           - { name: "location", label: "Localização", widget: "string" }
           - label: "Redes Sociais"
             name: "social"
