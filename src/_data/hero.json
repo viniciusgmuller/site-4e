@@ -9,7 +9,7 @@
   "cta": {
     "primary": {
       "text": "Agendar Diagnóstico",
-      "link": "contato.html"
+      "link": "/contato/"
     },
     "secondary": {
       "text": "Conhecer Soluções",
