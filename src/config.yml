@@ -1,12 +1,12 @@
 # Configuração do Decap CMS para o site 4E
 
-# DecapBridge PKCE auth
+# DecapBridge auth
 backend:
-  name: github
+  name: git-gateway
   repo: viniciusgmuller/site-4e
   branch: main
-  base_url: https://auth.decapbridge.com
-  auth_endpoint: /sites/95aca165-ab50-4a87-b16c-cf07b0dfd747/pkce
+  identity_url: https://auth.decapbridge.com/sites/95aca165-ab50-4a87-b16c-cf07b0dfd747
+  gateway_url: https://gateway.decapbridge.com
   commit_messages:
     create: Create {{collection}} "{{slug}}" via DecapCMS
     update: Update {{collection}} "{{slug}}" via DecapCMS
