@@ -60,6 +60,7 @@ collections:
           - label: "Logotipos da Marca"
             name: "logos"
             widget: "object"
+            collapsed: false
             fields:
               - { name: "main", label: "Logo Principal (colorido/gradiente)", widget: "image", hint: "SVG ou PNG - usado no header após scroll, footer, etc." }
               - { name: "white", label: "Logo Branco", widget: "image", hint: "SVG ou PNG - usado no header antes do scroll" }
