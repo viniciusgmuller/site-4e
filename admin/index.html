@@ -5,9 +5,188 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
   <title>4E - Painel Admin</title>
+  <style>
+    /* Estilos do Preview */
+    .preview-container {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+      min-height: 100%;
+      padding: 2rem;
+      color: #fff;
+    }
+
+    .preview-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .preview-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0.5rem;
+    }
+
+    .preview-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #7DFAB4, #C4B5FD, #F0ABFC, #FCD34D);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    .preview-text {
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .preview-item {
+      background: rgba(255,255,255,0.03);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .preview-item-label {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 0.25rem;
+    }
+
+    .preview-item-value {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .preview-logo {
+      max-width: 120px;
+      height: auto;
+      margin: 1rem 0;
+    }
+
+    .preview-logo-grid {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .preview-logo-item {
+      text-align: center;
+    }
+
+    .preview-logo-item img {
+      max-width: 80px;
+      max-height: 80px;
+      object-fit: contain;
+    }
+
+    .preview-logo-item span {
+      display: block;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 0.5rem;
+    }
+
+    .preview-social {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .preview-social a {
+      color: #C4B5FD;
+      text-decoration: none;
+      font-size: 0.875rem;
+    }
+  </style>
 </head>
 <body>
-  <!-- Decap CMS carrega automaticamente o config.yml -->
   <script src="https://unpkg.com/decap-cms@3.9.0/dist/decap-cms.js"></script>
+  <script>
+    // Preview Template para Configurações do Site
+    const SitePreview = createClass({
+      render: function() {
+        const entry = this.props.entry;
+        const data = entry.get('data').toJS();
+        const logos = data.logos || {};
+        const social = data.social || {};
+
+        return h('div', {className: 'preview-container'},
+          // Header com Logo
+          h('div', {className: 'preview-card'},
+            h('div', {className: 'preview-label'}, 'Identidade'),
+            h('div', {className: 'preview-title'}, data.title || '4E Consultoria'),
+            h('p', {className: 'preview-text'}, data.description)
+          ),
+
+          // Logos
+          h('div', {className: 'preview-card'},
+            h('div', {className: 'preview-label'}, 'Logotipos'),
+            h('div', {className: 'preview-logo-grid'},
+              logos.main && h('div', {className: 'preview-logo-item'},
+                h('img', {src: this.props.getAsset(logos.main).toString()}),
+                h('span', {}, 'Principal')
+              ),
+              logos.white && h('div', {className: 'preview-logo-item', style: {background: '#333', padding: '1rem', borderRadius: '8px'}},
+                h('img', {src: this.props.getAsset(logos.white).toString()}),
+                h('span', {}, 'Branco')
+              ),
+              logos.symbol && h('div', {className: 'preview-logo-item'},
+                h('img', {src: this.props.getAsset(logos.symbol).toString()}),
+                h('span', {}, 'Símbolo')
+              )
+            )
+          ),
+
+          // Contato
+          h('div', {className: 'preview-card'},
+            h('div', {className: 'preview-label'}, 'Contato'),
+            h('div', {className: 'preview-grid'},
+              h('div', {className: 'preview-item'},
+                h('div', {className: 'preview-item-label'}, 'E-mail'),
+                h('div', {className: 'preview-item-value'}, data.email)
+              ),
+              h('div', {className: 'preview-item'},
+                h('div', {className: 'preview-item-label'}, 'Telefone'),
+                h('div', {className: 'preview-item-value'}, data.phone)
+              ),
+              h('div', {className: 'preview-item'},
+                h('div', {className: 'preview-item-label'}, 'WhatsApp'),
+                h('div', {className: 'preview-item-value'}, data.whatsapp)
+              ),
+              h('div', {className: 'preview-item'},
+                h('div', {className: 'preview-item-label'}, 'Localização'),
+                h('div', {className: 'preview-item-value'}, data.location)
+              )
+            )
+          ),
+
+          // Redes Sociais
+          h('div', {className: 'preview-card'},
+            h('div', {className: 'preview-label'}, 'Redes Sociais'),
+            h('div', {className: 'preview-social'},
+              social.linkedin && h('a', {href: social.linkedin}, 'LinkedIn'),
+              social.instagram && h('a', {href: social.instagram}, 'Instagram'),
+              social.youtube && h('a', {href: social.youtube}, 'YouTube')
+            )
+          )
+        );
+      }
+    });
+
+    // Registrar o preview template
+    CMS.registerPreviewTemplate('site', SitePreview);
+  </script>
 </body>
 </html>
