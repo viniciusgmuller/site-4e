@@ -57,6 +57,13 @@ collections:
           - { name: "phone", label: "Telefone", widget: "string" }
           - { name: "whatsapp", label: "WhatsApp (apenas números com DDI+DDD)", widget: "string", hint: "Ex: 5554999999999" }
           - { name: "location", label: "Localização", widget: "string" }
+          - label: "Logotipos da Marca"
+            name: "logos"
+            widget: "object"
+            fields:
+              - { name: "main", label: "Logo Principal (colorido/gradiente)", widget: "image", hint: "SVG ou PNG - usado no header após scroll, footer, etc." }
+              - { name: "white", label: "Logo Branco", widget: "image", hint: "SVG ou PNG - usado no header antes do scroll" }
+              - { name: "symbol", label: "Símbolo (apenas o 4E)", widget: "image", hint: "SVG ou PNG - símbolo sem texto" }
           - label: "Redes Sociais"
             name: "social"
             widget: "object"
@@ -126,6 +133,8 @@ collections:
               - { name: "title", label: "Título", widget: "string" }
               - { name: "description", label: "Descrição curta", widget: "text" }
               - { name: "link", label: "Link da página", widget: "string" }
+              - { name: "symbol", label: "Símbolo da Área", widget: "image", hint: "SVG ou PNG - forma geométrica com gradiente" }
+              - { name: "logo", label: "Logo Completo da Área", widget: "image", hint: "SVG ou PNG - símbolo + nome da área (versão branca para hero)" }
 
   # =====================================
   # PÁGINA SOBRE

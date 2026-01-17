@@ -1,15 +1,25 @@
 {# Template reutilizável para páginas de serviço #}
+{# Busca os dados do serviço correspondente para acessar symbol e logo do CMS #}
+{% set serviceData = services | selectattr("id", "equalto", pageData.id) | first %}
 
 <!-- Hero Section -->
 <section class="sp-hero">
   <div class="sp-hero-symbol">
-    {% include "icons/" + pageData.id + "-symbol.njk" ignore missing %}
+    {% if serviceData.symbol %}
+      <img src="{{ serviceData.symbol }}" alt="{{ pageData.title }} - Símbolo" class="sp-symbol-img">
+    {% else %}
+      {% include "icons/" + pageData.id + "-symbol.njk" ignore missing %}
+    {% endif %}
   </div>
 
   <div class="container">
     <div class="sp-hero-content">
       <div class="sp-hero-logo reveal">
-        {% include "icons/" + pageData.id + "-logo.njk" ignore missing %}
+        {% if serviceData.logo %}
+          <img src="{{ serviceData.logo }}" alt="{{ pageData.title }}" class="sp-logo-img">
+        {% else %}
+          {% include "icons/" + pageData.id + "-logo.njk" ignore missing %}
+        {% endif %}
       </div>
       <h1 class="sp-hero-title reveal">
         {{ pageData.hero.title | safe }}
@@ -44,7 +54,11 @@
     <div class="sp-purpose-grid">
       <div class="sp-purpose-visual">
         <div class="sp-purpose-symbol">
-          {% include "icons/" + pageData.id + "-symbol.njk" ignore missing %}
+          {% if serviceData.symbol %}
+            <img src="{{ serviceData.symbol }}" alt="{{ pageData.title }} - Símbolo" class="sp-symbol-img">
+          {% else %}
+            {% include "icons/" + pageData.id + "-symbol.njk" ignore missing %}
+          {% endif %}
         </div>
       </div>
 

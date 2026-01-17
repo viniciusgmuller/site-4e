@@ -5,6 +5,11 @@
   "phone": "(54) 999591035",
   "whatsapp": "5554999591035",
   "location": "São Paulo, SP",
+  "logos": {
+    "main": "/uploads/logos/4e-logo-gradient.svg",
+    "white": "/uploads/logos/4e-logo-white.svg",
+    "symbol": "/uploads/logos/4e-symbol-gradient.svg"
+  },
   "social": {
     "linkedin": "https://www.linkedin.com/company/duck-studio-design?originalSubdomain=br",
     "instagram": "https://www.instagram.com/duckdesignstudio/",

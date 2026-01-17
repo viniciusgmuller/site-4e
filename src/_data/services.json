@@ -5,7 +5,9 @@
     "title": "Gestão Pública",
     "description": "Consultoria para secretarias de educação com foco em BNCC, Novo Ensino Médio, compliance regulatório e prestação de contas.",
     "link": "gestao-publica",
-    "icon": "building"
+    "icon": "building",
+    "symbol": "/uploads/logos/gestao-publica-symbol.svg",
+    "logo": ""
   },
   {
     "id": "educacao-privada",
@@ -13,7 +15,9 @@
     "title": "Educação Privada",
     "description": "Gestão estratégica para escolas privadas e IES com foco em governança corporativa, contratos e segurança jurídica.",
     "link": "educacao-privada",
-    "icon": "graduation"
+    "icon": "graduation",
+    "symbol": "/uploads/logos/educacao-privada-symbol.svg",
+    "logo": ""
   },
   {
     "id": "educacao-corporativa",
@@ -21,7 +25,9 @@
     "title": "Educação Corporativa",
     "description": "Estruturação de programas de educação corporativa, universidades corporativas e parcerias educacionais com compliance.",
     "link": "educacao-corporativa",
-    "icon": "briefcase"
+    "icon": "briefcase",
+    "symbol": "/uploads/logos/educacao-corporativa-symbol.svg",
+    "logo": ""
   },
   {
     "id": "gestao-crises",
@@ -29,6 +35,8 @@
     "title": "Gestão de Crises",
     "description": "Prevenção, mediação e resolução de crises institucionais com protocolos especializados para o ambiente educacional.",
     "link": "gestao-crises",
-    "icon": "alert"
+    "icon": "alert",
+    "symbol": "/uploads/logos/gestao-crises-symbol.svg",
+    "logo": ""
   }
 ]

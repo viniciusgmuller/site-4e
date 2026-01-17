@@ -1852,7 +1852,8 @@ a {
   opacity: 0.15;
 }
 
-.sp-hero-symbol svg {
+.sp-hero-symbol svg,
+.sp-hero-symbol img {
   width: 100%;
   height: 100%;
 }
@@ -1867,14 +1868,16 @@ a {
   margin-bottom: var(--space-8);
 }
 
-.sp-hero-logo svg {
+.sp-hero-logo svg,
+.sp-hero-logo img {
   max-width: 320px;
   height: auto;
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
 }
 
 @media (max-width: 768px) {
-  .sp-hero-logo svg {
+  .sp-hero-logo svg,
+  .sp-hero-logo img {
     max-width: 260px;
   }
 }
@@ -1968,7 +1971,8 @@ a {
   opacity: 1 !important;
 }
 
-.sp-purpose-symbol svg {
+.sp-purpose-symbol svg,
+.sp-purpose-symbol img {
   width: 100%;
   height: 100%;
   opacity: 1;
