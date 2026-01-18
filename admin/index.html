@@ -5,345 +5,153 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
   <title>4E - Painel Admin</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    /* ========================================
-       ESTILOS DO PREVIEW - Tema 4E
-       ======================================== */
-
-    .preview-frame {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #0a0a0a;
-      min-height: 100vh;
-      color: #fff;
-      line-height: 1.6;
-    }
-
-    /* Hero Section */
-    .preview-hero {
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
-      padding: 4rem 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .preview-hero::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(125,250,180,0.1) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .preview-hero-label {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background: rgba(255,255,255,0.1);
-      border-radius: 50px;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: rgba(255,255,255,0.7);
-      margin-bottom: 1.5rem;
-    }
-
-    .preview-hero-title {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-
-    .preview-hero-title .gradient {
-      background: linear-gradient(90deg, #7DFAB4, #C4B5FD, #F0ABFC, #FCD34D);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .preview-hero-text {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.7);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* Section Base */
-    .preview-section {
-      padding: 3rem 2rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .preview-section-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: #7DFAB4;
-      margin-bottom: 0.75rem;
-    }
-
-    .preview-section-title {
-      font-size: 1.75rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .preview-section-text {
-      color: rgba(255,255,255,0.7);
-      margin-bottom: 1rem;
-    }
-
-    /* Cards Grid */
-    .preview-cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .preview-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 12px;
-      padding: 1.5rem;
-      transition: all 0.3s;
-    }
-
-    .preview-card:hover {
-      background: rgba(255,255,255,0.05);
-      border-color: rgba(255,255,255,0.15);
-    }
-
-    .preview-card-title {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .preview-card-text {
-      font-size: 0.875rem;
-      color: rgba(255,255,255,0.6);
-    }
-
-    /* 4 Pilares */
-    .preview-pillars {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .preview-pillar {
-      text-align: center;
-      padding: 1.5rem 1rem;
-      background: rgba(255,255,255,0.02);
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .preview-pillar-letter {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-    }
-
-    .preview-pillar-letter.gestao-publica { color: #7DFAB4; }
-    .preview-pillar-letter.educacao-privada { color: #C4B5FD; }
-    .preview-pillar-letter.educacao-corporativa { color: #F0ABFC; }
-    .preview-pillar-letter.gestao-crises { color: #FCD34D; }
-
-    .preview-pillar-name {
-      font-size: 0.875rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .preview-pillar-desc {
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.5);
-    }
-
-    /* Team */
-    .preview-team {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .preview-team-member {
-      text-align: center;
-      padding: 1.5rem;
-      background: rgba(255,255,255,0.02);
-      border-radius: 12px;
-    }
-
-    .preview-team-avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #7DFAB4, #C4B5FD);
-      margin: 0 auto 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      font-weight: 700;
-      color: #0a0a0a;
-    }
-
-    .preview-team-name {
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-    }
-
-    .preview-team-role {
-      font-size: 0.75rem;
-      color: #C4B5FD;
-      margin-bottom: 0.5rem;
-    }
-
-    .preview-team-bio {
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.5);
-    }
-
-    /* CTA Section */
-    .preview-cta {
-      background: linear-gradient(135deg, rgba(125,250,180,0.1) 0%, rgba(196,181,253,0.1) 50%, rgba(252,211,77,0.1) 100%);
-      padding: 3rem 2rem;
-      text-align: center;
-      border-radius: 16px;
-      margin: 2rem;
-    }
-
-    .preview-cta-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-    }
-
-    .preview-cta-text {
-      color: rgba(255,255,255,0.7);
-      margin-bottom: 1.5rem;
-    }
-
-    .preview-btn {
-      display: inline-block;
-      padding: 0.875rem 2rem;
-      background: linear-gradient(90deg, #7DFAB4, #C4B5FD);
-      color: #0a0a0a;
-      font-weight: 600;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-
-    /* Logos Preview */
-    .preview-logos {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .preview-logo-box {
-      text-align: center;
-      padding: 1.5rem;
-      background: rgba(255,255,255,0.03);
-      border-radius: 12px;
-      min-width: 120px;
-    }
-
-    .preview-logo-box.dark {
-      background: #1a1a1a;
-    }
-
-    .preview-logo-box img {
-      max-width: 100px;
-      max-height: 80px;
-      object-fit: contain;
-    }
-
-    .preview-logo-label {
-      font-size: 0.7rem;
-      color: rgba(255,255,255,0.4);
-      margin-top: 0.75rem;
-    }
-
-    /* Info Grid */
-    .preview-info-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .preview-info-item {
-      padding: 1rem;
-      background: rgba(255,255,255,0.03);
-      border-radius: 8px;
-    }
-
-    .preview-info-label {
-      font-size: 0.7rem;
-      color: rgba(255,255,255,0.4);
-      margin-bottom: 0.25rem;
-    }
-
-    .preview-info-value {
-      font-weight: 500;
-    }
-
-    /* Services Preview */
-    .preview-services {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .preview-service {
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 12px;
-      padding: 1.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .preview-service-number {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 3rem;
-      font-weight: 800;
-      color: rgba(255,255,255,0.05);
-    }
-
-    .preview-service-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .preview-service-desc {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.6);
-    }
-  </style>
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@3.9.0/dist/decap-cms.js"></script>
   <script>
+    // ========================================
+    // CARREGAR CSS REAL DO SITE
+    // ========================================
+    CMS.registerPreviewStyle('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+    CMS.registerPreviewStyle('/assets/css/style.css');
+
+    // CSS adicional para ajustes do preview
+    CMS.registerPreviewStyle(`
+      /* Forçar fundo escuro no preview */
+      html, body {
+        background: #0a0a0a !important;
+        color: #fff !important;
+        min-height: 100% !important;
+      }
+
+      /* Container do preview */
+      .cms-preview {
+        background: #0a0a0a;
+        min-height: 100vh;
+        padding: 0;
+      }
+
+      /* Ajustes para seções no preview */
+      .cms-preview .container {
+        max-width: 100%;
+        padding: 2rem;
+      }
+
+      /* Hero simplificado para preview */
+      .cms-preview-hero {
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+        padding: 4rem 2rem;
+        text-align: center;
+        position: relative;
+      }
+
+      .cms-preview-hero::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(125,250,180,0.15) 0%, transparent 70%);
+        pointer-events: none;
+      }
+
+      /* Section padrão */
+      .cms-preview-section {
+        padding: 3rem 2rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+      }
+
+      /* Cards grid */
+      .cms-preview-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .cms-preview-grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      /* Card */
+      .cms-preview-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 12px;
+        padding: 1.5rem;
+      }
+
+      /* Logos */
+      .cms-preview-logos {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 2rem;
+      }
+
+      .cms-preview-logo-box {
+        text-align: center;
+        padding: 1.5rem;
+        background: rgba(255,255,255,0.03);
+        border-radius: 12px;
+        min-width: 120px;
+      }
+
+      .cms-preview-logo-box.dark {
+        background: #1a1a1a;
+      }
+
+      .cms-preview-logo-box img {
+        max-width: 100px;
+        max-height: 80px;
+        object-fit: contain;
+      }
+
+      /* Info grid */
+      .cms-preview-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .cms-preview-info-item {
+        padding: 1rem;
+        background: rgba(255,255,255,0.03);
+        border-radius: 8px;
+      }
+
+      /* CTA */
+      .cms-preview-cta {
+        background: linear-gradient(135deg, rgba(125,250,180,0.1) 0%, rgba(196,181,253,0.1) 50%, rgba(252,211,77,0.1) 100%);
+        padding: 3rem 2rem;
+        text-align: center;
+        border-radius: 16px;
+        margin: 2rem;
+      }
+
+      /* Pilares */
+      .cms-preview-pillar {
+        text-align: center;
+        padding: 1.5rem 1rem;
+      }
+
+      .cms-preview-pillar-letter {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+      }
+
+      /* Cores das áreas */
+      .color-gestao-publica { color: #7DFAB4; }
+      .color-educacao-privada { color: #C4B5FD; }
+      .color-educacao-corporativa { color: #F0ABFC; }
+      .color-gestao-crises { color: #FCD34D; }
+    `, { raw: true });
+
     // ========================================
     // PREVIEW: Configurações do Site
     // ========================================
@@ -351,53 +159,57 @@
       render: function() {
         const data = this.props.entry.get('data').toJS();
         const logos = data.logos || {};
-        const social = data.social || {};
         const getAsset = this.props.getAsset;
 
-        return h('div', {className: 'preview-frame'},
-          h('div', {className: 'preview-hero'},
-            h('h1', {className: 'preview-hero-title'},
-              h('span', {className: 'gradient'}, data.title || '4E Consultoria')
+        return h('div', {className: 'cms-preview'},
+          // Hero com título
+          h('div', {className: 'cms-preview-hero'},
+            h('h1', {className: 'text-gradient', style: {fontSize: '2.5rem', fontWeight: 800}},
+              data.title || '4E Consultoria'
             ),
-            h('p', {className: 'preview-hero-text'}, data.description)
+            h('p', {style: {color: 'rgba(255,255,255,0.7)', maxWidth: '600px', margin: '1rem auto'}},
+              data.description
+            )
           ),
 
-          h('div', {className: 'preview-section'},
-            h('div', {className: 'preview-section-label'}, 'Logotipos da Marca'),
-            h('div', {className: 'preview-logos'},
-              logos.main && h('div', {className: 'preview-logo-box'},
+          // Logos
+          h('div', {className: 'cms-preview-section'},
+            h('span', {className: 'section-label'}, 'Logotipos da Marca'),
+            h('div', {className: 'cms-preview-logos'},
+              logos.main && h('div', {className: 'cms-preview-logo-box'},
                 h('img', {src: getAsset(logos.main).toString()}),
-                h('div', {className: 'preview-logo-label'}, 'Principal')
+                h('small', {style: {display: 'block', marginTop: '0.5rem', opacity: 0.5}}, 'Principal')
               ),
-              logos.white && h('div', {className: 'preview-logo-box dark'},
+              logos.white && h('div', {className: 'cms-preview-logo-box dark'},
                 h('img', {src: getAsset(logos.white).toString()}),
-                h('div', {className: 'preview-logo-label'}, 'Branco')
+                h('small', {style: {display: 'block', marginTop: '0.5rem', opacity: 0.5}}, 'Branco')
               ),
-              logos.symbol && h('div', {className: 'preview-logo-box'},
+              logos.symbol && h('div', {className: 'cms-preview-logo-box'},
                 h('img', {src: getAsset(logos.symbol).toString()}),
-                h('div', {className: 'preview-logo-label'}, 'Símbolo')
+                h('small', {style: {display: 'block', marginTop: '0.5rem', opacity: 0.5}}, 'Símbolo')
               )
             )
           ),
 
-          h('div', {className: 'preview-section'},
-            h('div', {className: 'preview-section-label'}, 'Informações de Contato'),
-            h('div', {className: 'preview-info-grid'},
-              h('div', {className: 'preview-info-item'},
-                h('div', {className: 'preview-info-label'}, 'E-mail'),
-                h('div', {className: 'preview-info-value'}, data.email)
+          // Contato
+          h('div', {className: 'cms-preview-section'},
+            h('span', {className: 'section-label'}, 'Informações de Contato'),
+            h('div', {className: 'cms-preview-info'},
+              h('div', {className: 'cms-preview-info-item'},
+                h('small', {style: {opacity: 0.5}}, 'E-mail'),
+                h('div', {style: {fontWeight: 500}}, data.email)
               ),
-              h('div', {className: 'preview-info-item'},
-                h('div', {className: 'preview-info-label'}, 'Telefone'),
-                h('div', {className: 'preview-info-value'}, data.phone)
+              h('div', {className: 'cms-preview-info-item'},
+                h('small', {style: {opacity: 0.5}}, 'Telefone'),
+                h('div', {style: {fontWeight: 500}}, data.phone)
               ),
-              h('div', {className: 'preview-info-item'},
-                h('div', {className: 'preview-info-label'}, 'WhatsApp'),
-                h('div', {className: 'preview-info-value'}, data.whatsapp)
+              h('div', {className: 'cms-preview-info-item'},
+                h('small', {style: {opacity: 0.5}}, 'WhatsApp'),
+                h('div', {style: {fontWeight: 500}}, data.whatsapp)
               ),
-              h('div', {className: 'preview-info-item'},
-                h('div', {className: 'preview-info-label'}, 'Localização'),
-                h('div', {className: 'preview-info-value'}, data.location)
+              h('div', {className: 'cms-preview-info-item'},
+                h('small', {style: {opacity: 0.5}}, 'Localização'),
+                h('div', {style: {fontWeight: 500}}, data.location)
               )
             )
           )
@@ -415,62 +227,67 @@
         const purpose = data.purpose || {};
         const pillars = data.pillars || {};
         const essence = data.essence || {};
-        const team = data.team || {};
         const cta = data.cta || {};
 
-        return h('div', {className: 'preview-frame'},
+        return h('div', {className: 'cms-preview'},
           // Hero
-          h('div', {className: 'preview-hero'},
-            h('div', {className: 'preview-hero-label'}, hero.label || 'Sobre a 4E'),
-            h('h1', {className: 'preview-hero-title'},
-              h('span', {dangerouslySetInnerHTML: {__html: (hero.title || '').replace(/text-gradient-animated|text-gradient/g, 'gradient')}})
+          h('div', {className: 'cms-preview-hero'},
+            h('span', {className: 'section-label'}, hero.label),
+            h('h1', {style: {fontSize: '2.5rem', fontWeight: 800},
+              dangerouslySetInnerHTML: {__html: (hero.title || '').replace(/text-gradient-animated|text-gradient/g, 'text-gradient')}}
             ),
-            h('p', {className: 'preview-hero-text'}, hero.text)
+            h('p', {style: {color: 'rgba(255,255,255,0.7)', maxWidth: '600px', margin: '1rem auto'}}, hero.text)
           ),
 
           // Propósito
-          purpose.title && h('div', {className: 'preview-section'},
-            h('div', {className: 'preview-section-label'}, purpose.label || 'Propósito'),
-            h('h2', {className: 'preview-section-title', dangerouslySetInnerHTML: {__html: purpose.title}}),
+          purpose.title && h('div', {className: 'cms-preview-section'},
+            h('span', {className: 'section-label'}, purpose.label),
+            h('h2', {style: {fontSize: '1.75rem', marginBottom: '1rem'},
+              dangerouslySetInnerHTML: {__html: purpose.title}}
+            ),
             (purpose.paragraphs || []).map(function(p, i) {
-              return h('p', {key: i, className: 'preview-section-text'}, p);
+              return h('p', {key: i, style: {color: 'rgba(255,255,255,0.7)', marginBottom: '1rem'}}, p);
             })
           ),
 
           // 4 Pilares
-          pillars.items && h('div', {className: 'preview-section'},
-            h('div', {className: 'preview-section-label'}, pillars.label || 'Os 4 Pilares'),
-            h('h2', {className: 'preview-section-title', dangerouslySetInnerHTML: {__html: pillars.title}}),
-            h('div', {className: 'preview-pillars'},
+          pillars.items && h('div', {className: 'cms-preview-section'},
+            h('span', {className: 'section-label'}, pillars.label),
+            h('h2', {style: {fontSize: '1.75rem', marginBottom: '1rem'},
+              dangerouslySetInnerHTML: {__html: pillars.title}}
+            ),
+            h('div', {className: 'cms-preview-grid cms-preview-grid-4'},
               pillars.items.map(function(pillar, i) {
-                return h('div', {key: i, className: 'preview-pillar'},
-                  h('div', {className: 'preview-pillar-letter ' + (pillar.color || '')}, pillar.letter),
-                  h('div', {className: 'preview-pillar-name'}, pillar.name),
-                  h('div', {className: 'preview-pillar-desc'}, pillar.description)
+                return h('div', {key: i, className: 'cms-preview-card cms-preview-pillar'},
+                  h('div', {className: 'cms-preview-pillar-letter color-' + (pillar.color || 'gestao-publica')}, pillar.letter),
+                  h('div', {style: {fontWeight: 600, marginBottom: '0.5rem'}}, pillar.name),
+                  h('div', {style: {fontSize: '0.875rem', opacity: 0.6}}, pillar.description)
                 );
               })
             )
           ),
 
           // Essência
-          essence.items && h('div', {className: 'preview-section'},
-            h('div', {className: 'preview-section-label'}, essence.label || 'Nossa Essência'),
-            h('h2', {className: 'preview-section-title', dangerouslySetInnerHTML: {__html: essence.title}}),
-            h('div', {className: 'preview-cards'},
+          essence.items && h('div', {className: 'cms-preview-section'},
+            h('span', {className: 'section-label'}, essence.label),
+            h('h2', {style: {fontSize: '1.75rem', marginBottom: '1rem'},
+              dangerouslySetInnerHTML: {__html: essence.title}}
+            ),
+            h('div', {className: 'cms-preview-grid'},
               essence.items.map(function(item, i) {
-                return h('div', {key: i, className: 'preview-card'},
-                  h('div', {className: 'preview-card-title'}, item.title),
-                  h('div', {className: 'preview-card-text'}, item.description)
+                return h('div', {key: i, className: 'cms-preview-card'},
+                  h('div', {style: {fontWeight: 600, marginBottom: '0.5rem'}}, item.title),
+                  h('div', {style: {fontSize: '0.875rem', opacity: 0.7}}, item.description)
                 );
               })
             )
           ),
 
           // CTA
-          cta.title && h('div', {className: 'preview-cta'},
-            h('h2', {className: 'preview-cta-title'}, cta.title),
-            h('p', {className: 'preview-cta-text'}, cta.subtitle),
-            h('a', {className: 'preview-btn', href: cta.buttonLink}, cta.buttonText)
+          cta.title && h('div', {className: 'cms-preview-cta'},
+            h('h2', {style: {fontSize: '1.5rem', marginBottom: '0.75rem'}}, cta.title),
+            h('p', {style: {opacity: 0.7, marginBottom: '1.5rem'}}, cta.subtitle),
+            h('span', {className: 'btn btn-primary'}, cta.buttonText)
           )
         );
       }
@@ -485,18 +302,18 @@
         const title = data.title || {};
         const cta = data.cta || {};
 
-        return h('div', {className: 'preview-frame'},
-          h('div', {className: 'preview-hero', style: {minHeight: '400px'}},
-            data.badge && h('div', {className: 'preview-hero-label'}, data.badge),
-            h('h1', {className: 'preview-hero-title', style: {fontSize: '3rem'}},
+        return h('div', {className: 'cms-preview'},
+          h('div', {className: 'cms-preview-hero', style: {minHeight: '500px', display: 'flex', flexDirection: 'column', justifyContent: 'center'}},
+            data.badge && h('span', {className: 'section-label', style: {marginBottom: '1.5rem'}}, data.badge),
+            h('h1', {style: {fontSize: '3rem', fontWeight: 800, lineHeight: 1.2}},
               title.line1 && h('span', {}, title.line1), h('br'),
               title.line2 && h('span', {}, title.line2), h('br'),
-              title.line3 && h('span', {className: 'gradient'}, title.line3)
+              title.line3 && h('span', {className: 'text-gradient'}, title.line3)
             ),
-            h('p', {className: 'preview-hero-text', style: {marginTop: '1.5rem'}}, data.subtitle),
+            h('p', {style: {color: 'rgba(255,255,255,0.7)', maxWidth: '600px', margin: '1.5rem auto'}}, data.subtitle),
             h('div', {style: {marginTop: '2rem', display: 'flex', gap: '1rem', justifyContent: 'center'}},
-              cta.primary && h('a', {className: 'preview-btn'}, cta.primary.text),
-              cta.secondary && h('a', {className: 'preview-btn', style: {background: 'transparent', border: '1px solid rgba(255,255,255,0.3)', color: '#fff'}}, cta.secondary.text)
+              cta.primary && h('span', {className: 'btn btn-primary btn-lg'}, cta.primary.text),
+              cta.secondary && h('span', {className: 'btn btn-secondary btn-lg'}, cta.secondary.text)
             )
           )
         );
@@ -512,19 +329,17 @@
         const services = data.services || [];
         const getAsset = this.props.getAsset;
 
-        return h('div', {className: 'preview-frame'},
-          h('div', {className: 'preview-section'},
-            h('div', {className: 'preview-section-label'}, 'Nossas Soluções'),
-            h('h2', {className: 'preview-section-title'},
-              h('span', {className: 'gradient'}, '4 Áreas de Atuação')
-            ),
-            h('div', {className: 'preview-services'},
+        return h('div', {className: 'cms-preview'},
+          h('div', {className: 'cms-preview-section'},
+            h('span', {className: 'section-label'}, 'Nossas Soluções'),
+            h('h2', {className: 'text-gradient', style: {fontSize: '2rem', marginBottom: '1.5rem'}}, '4 Áreas de Atuação'),
+            h('div', {className: 'cms-preview-grid'},
               services.map(function(service, i) {
-                return h('div', {key: i, className: 'preview-service'},
-                  h('div', {className: 'preview-service-number'}, service.number),
+                return h('div', {key: i, className: 'cms-preview-card', style: {position: 'relative'}},
+                  h('span', {style: {position: 'absolute', top: '1rem', right: '1rem', fontSize: '3rem', fontWeight: 800, opacity: 0.05}}, service.number),
                   service.symbol && h('img', {src: getAsset(service.symbol).toString(), style: {width: '40px', height: '40px', marginBottom: '1rem'}}),
-                  h('div', {className: 'preview-service-title'}, service.title),
-                  h('div', {className: 'preview-service-desc'}, service.description)
+                  h('div', {style: {fontWeight: 600, marginBottom: '0.5rem'}}, service.title),
+                  h('div', {style: {fontSize: '0.875rem', opacity: 0.7}}, service.description)
                 );
               })
             )
@@ -534,7 +349,7 @@
     });
 
     // ========================================
-    // PREVIEW: Páginas de Serviço (genérico)
+    // PREVIEW: Páginas de Serviço
     // ========================================
     const ServicePagePreview = createClass({
       render: function() {
@@ -553,65 +368,71 @@
         };
         const accentColor = colorMap[data.id] || '#7DFAB4';
 
-        return h('div', {className: 'preview-frame'},
+        return h('div', {className: 'cms-preview'},
           // Hero
-          h('div', {className: 'preview-hero'},
-            h('h1', {className: 'preview-hero-title'},
-              h('span', {dangerouslySetInnerHTML: {__html: (hero.title || data.title || '').replace(/text-gradient/g, 'gradient')}})
+          h('div', {className: 'cms-preview-hero'},
+            h('h1', {style: {fontSize: '2.5rem', fontWeight: 800},
+              dangerouslySetInnerHTML: {__html: (hero.title || data.title || '').replace(/text-gradient/g, 'text-gradient')}}
             ),
-            h('p', {className: 'preview-hero-text'}, hero.subtitle)
+            h('p', {style: {color: 'rgba(255,255,255,0.7)', maxWidth: '600px', margin: '1rem auto'}}, hero.subtitle)
           ),
 
           // Propósito
-          purpose.title && h('div', {className: 'preview-section'},
-            h('div', {className: 'preview-section-label', style: {color: accentColor}}, purpose.label),
-            h('h2', {className: 'preview-section-title', dangerouslySetInnerHTML: {__html: purpose.title}}),
+          purpose.title && h('div', {className: 'cms-preview-section'},
+            h('span', {className: 'section-label', style: {color: accentColor}}, purpose.label),
+            h('h2', {style: {fontSize: '1.75rem', marginBottom: '1rem'},
+              dangerouslySetInnerHTML: {__html: purpose.title}}
+            ),
             (purpose.paragraphs || []).map(function(p, i) {
-              return h('p', {key: i, className: 'preview-section-text'}, p);
+              return h('p', {key: i, style: {color: 'rgba(255,255,255,0.7)', marginBottom: '1rem'}}, p);
             })
           ),
 
           // Desafios
-          challenges.items && h('div', {className: 'preview-section', style: {background: 'rgba(255,255,255,0.02)'}},
-            h('div', {className: 'preview-section-label', style: {color: accentColor}}, challenges.label),
-            h('h2', {className: 'preview-section-title', dangerouslySetInnerHTML: {__html: challenges.title}}),
-            h('p', {className: 'preview-section-text'}, challenges.subtitle),
-            h('div', {className: 'preview-cards'},
+          challenges.items && h('div', {className: 'cms-preview-section', style: {background: 'rgba(255,255,255,0.02)'}},
+            h('span', {className: 'section-label', style: {color: accentColor}}, challenges.label),
+            h('h2', {style: {fontSize: '1.75rem', marginBottom: '0.5rem'},
+              dangerouslySetInnerHTML: {__html: challenges.title}}
+            ),
+            h('p', {style: {color: 'rgba(255,255,255,0.7)', marginBottom: '1.5rem'}}, challenges.subtitle),
+            h('div', {className: 'cms-preview-grid'},
               challenges.items.map(function(item, i) {
-                return h('div', {key: i, className: 'preview-card'},
-                  h('div', {className: 'preview-card-title'}, item.title),
-                  h('div', {className: 'preview-card-text'}, item.description)
+                return h('div', {key: i, className: 'cms-preview-card'},
+                  h('div', {style: {fontWeight: 600, marginBottom: '0.5rem'}}, item.title),
+                  h('div', {style: {fontSize: '0.875rem', opacity: 0.7}}, item.description)
                 );
               })
             )
           ),
 
           // Serviços
-          services.items && h('div', {className: 'preview-section'},
-            h('div', {className: 'preview-section-label', style: {color: accentColor}}, services.label),
-            h('h2', {className: 'preview-section-title', dangerouslySetInnerHTML: {__html: services.title}}),
-            h('div', {className: 'preview-cards'},
+          services.items && h('div', {className: 'cms-preview-section'},
+            h('span', {className: 'section-label', style: {color: accentColor}}, services.label),
+            h('h2', {style: {fontSize: '1.75rem', marginBottom: '1.5rem'},
+              dangerouslySetInnerHTML: {__html: services.title}}
+            ),
+            h('div', {className: 'cms-preview-grid'},
               services.items.map(function(item, i) {
-                return h('div', {key: i, className: 'preview-card'},
-                  h('div', {className: 'preview-card-title'}, item.title),
-                  h('div', {className: 'preview-card-text'}, item.description)
+                return h('div', {key: i, className: 'cms-preview-card'},
+                  h('div', {style: {fontWeight: 600, marginBottom: '0.5rem'}}, item.title),
+                  h('div', {style: {fontSize: '0.875rem', opacity: 0.7}}, item.description)
                 );
               })
             )
           ),
 
           // CTA
-          cta.title && h('div', {className: 'preview-cta'},
-            h('h2', {className: 'preview-cta-title'}, cta.title),
-            h('p', {className: 'preview-cta-text'}, cta.subtitle),
-            h('a', {className: 'preview-btn'}, cta.buttonText)
+          cta.title && h('div', {className: 'cms-preview-cta'},
+            h('h2', {style: {fontSize: '1.5rem', marginBottom: '0.75rem'}}, cta.title),
+            h('p', {style: {opacity: 0.7, marginBottom: '1.5rem'}}, cta.subtitle),
+            h('span', {className: 'btn btn-primary btn-lg'}, cta.buttonText)
           )
         );
       }
     });
 
     // ========================================
-    // REGISTRAR TODOS OS PREVIEWS
+    // REGISTRAR PREVIEWS
     // ========================================
     CMS.registerPreviewTemplate('site', SitePreview);
     CMS.registerPreviewTemplate('sobre', SobrePreview);
