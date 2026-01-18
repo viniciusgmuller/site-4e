@@ -1,20 +1,22 @@
-[
-  {
-    "name": "Fundador 1",
-    "role": "CEO & Especialista em Gestão Educacional",
-    "bio": "Mais de 20 anos de experiência em gestão de redes educacionais públicas e privadas. Ex-secretário de educação.",
-    "image": ""
-  },
-  {
-    "name": "Fundador 2",
-    "role": "Diretor Jurídico",
-    "bio": "Especialista em Direito Educacional com vasta experiência em compliance, contratos e gestão de crises institucionais.",
-    "image": ""
-  },
-  {
-    "name": "Fundador 3",
-    "role": "Diretor de Operações",
-    "bio": "Experiência em implementação de políticas educacionais, BNCC e Novo Ensino Médio em redes públicas de ensino.",
-    "image": ""
-  }
-]
+{
+  "team": [
+    {
+      "name": "Fundador 1",
+      "role": "CEO & Especialista em Gestão Educacional",
+      "bio": "Mais de 20 anos de experiência em gestão de redes educacionais públicas e privadas. Ex-secretário de educação.",
+      "image": ""
+    },
+    {
+      "name": "Fundador 2",
+      "role": "Diretor Jurídico",
+      "bio": "Especialista em Direito Educacional com vasta experiência em compliance, contratos e gestão de crises institucionais.",
+      "image": ""
+    },
+    {
+      "name": "Fundador 3",
+      "role": "Diretor de Operações",
+      "bio": "Experiência em implementação de políticas educacionais, BNCC e Novo Ensino Médio em redes públicas de ensino.",
+      "image": ""
+    }
+  ]
+}
