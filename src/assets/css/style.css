@@ -1612,6 +1612,7 @@ a {
 .founder-name {
   font-size: var(--text-xl);
   margin-bottom: var(--space-2);
+  color: var(--color-gray-900);
 }
 
 .founder-role {
