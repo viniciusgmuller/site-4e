@@ -53,6 +53,7 @@ collections:
         fields:
           - { name: "title", label: "Nome do Site", widget: "string" }
           - { name: "description", label: "Descrição (SEO)", widget: "text" }
+          - { name: "ogImage", label: "Imagem OG (Open Graph)", widget: "image", hint: "Imagem padrão para compartilhamento em redes sociais. Recomendado: 1200x630px" }
           - { name: "email", label: "E-mail de Contato", widget: "string" }
           - { name: "phone", label: "Telefone", widget: "string" }
           - { name: "whatsapp", label: "WhatsApp (apenas números com DDI+DDD)", widget: "string", hint: "Ex: 5554999999999" }

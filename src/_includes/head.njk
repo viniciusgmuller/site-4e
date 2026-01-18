@@ -8,14 +8,14 @@
 <meta property="og:url" content="{{ url | default('https://4e.com.br/') }}">
 <meta property="og:title" content="{{ title | default(site.title) }}">
 <meta property="og:description" content="{{ description | default(site.description) }}">
-<meta property="og:image" content="https://4e.com.br/assets/og-image.png">
+<meta property="og:image" content="{{ site.ogImage | url }}">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="{{ url | default('https://4e.com.br/') }}">
 <meta name="twitter:title" content="{{ title | default(site.title) }}">
 <meta name="twitter:description" content="{{ description | default(site.description) }}">
-<meta name="twitter:image" content="https://4e.com.br/assets/og-image.png">
+<meta name="twitter:image" content="{{ site.ogImage | url }}">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
