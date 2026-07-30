@@ -2,21 +2,27 @@
   "team": [
     {
       "name": "Alberto Padilha Colombo",
-      "role": "CEO & Especialista em Gestão Educacional",
-      "bio": "Pós-graduado em Direito Processual Penal Contemporâneo Aplicado pelo Instituto Brasileiro de Processo Penal (IBRASPP), em parceria com a Universidade de Caxias do Sul. Possui certificação em Comunicação e Oratória pelo Clube da Fala e é fundador do escritório Colombo dos Santos Advocacia.",
-      "image": "/uploads/alberto-p-500.jpg"
+      "role": "Sócio · Advogado",
+      "bio": "Advogado (OAB/RS 118.112), pós-graduado em Direito Processual Penal e pós-graduando em Direito Empresarial. Certificado em Comunicação e Oratória, é sócio-fundador do escritório Colombo dos Santos Advocacia.",
+      "image": "/uploads/alberto-500.jpg"
     },
     {
-      "name": "Fundador 2",
-      "role": "Diretor Jurídico",
-      "bio": "Especialista em Direito Educacional com vasta experiência em compliance, contratos e gestão de crises institucionais.",
-      "image": ""
+      "name": "Gustavo dos Santos",
+      "role": "Sócio · Advogado",
+      "bio": "Advogado (OAB/RS 116.542) com pós-graduações em Direito Educacional, Direito e Processo do Trabalho e Direito Imobiliário Notarial. Integra a Comissão de Direito Imobiliário da OAB Canela/Gramado e é sócio-fundador do escritório Colombo dos Santos Advocacia.",
+      "image": "/uploads/gustavo-500.jpg"
     },
     {
-      "name": "Fundador 3",
-      "role": "Diretor de Operações",
-      "bio": "Experiência em implementação de políticas educacionais, BNCC e Novo Ensino Médio em redes públicas de ensino.",
-      "image": ""
+      "name": "Janete Oliveira da Silva Santos",
+      "role": "Sócia · Gestão Escolar",
+      "bio": "Pedagoga com mais de 30 anos dedicados à educação, da sala de aula à gestão. Foi Secretária Municipal de Educação, Esporte e Lazer de Canela/RS (2021–2024), com forte atuação em políticas públicas, educação em tempo integral e educação especial.",
+      "image": "/uploads/janete-500.jpg"
+    },
+    {
+      "name": "Rosane Bernardete Brochier Kist",
+      "role": "Sócia · Serviço Social",
+      "bio": "Assistente social com doutorado em Serviço Social e pós-doutorado em Desenvolvimento Regional. Atua como perita e mediadora social junto ao Judiciário, com experiência em proteção social, mediação de conflitos e desenvolvimento regional.",
+      "image": "/uploads/rosane-500.jpg"
     }
   ]
 }
